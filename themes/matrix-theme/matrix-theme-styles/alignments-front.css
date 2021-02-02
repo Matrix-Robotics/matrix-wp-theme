@@ -64,11 +64,51 @@ body {
 	max-width: 360px;
 }
 
-@media screen and (min-width: 1290px) {
+@media only screen and (min-width: 1200px) {
 
 	.wp-site-blocks,
 	.wp-block-template-part.alignfull {
-		padding: 0;
+		Padding: 40px 120px 40px 120px;
+		Grid-gap: 15px;
+	}
+	div {
+		margin: 0 30px;
+	}
+
+	.wp-site-blocks .alignfull {
+		transform: translateX(0px);
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+
+	.wp-site-blocks,
+	.wp-block-template-part.alignfull {
+		Padding: 40px 60px 40px 60px;
+		Grid-gap: 15px;
+	}
+	div {
+		margin: 0 30px;
+	}
+
+	.wp-site-blocks .alignfull {
+		transform: translateX(0px);
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+
+	.wp-site-blocks,
+	.wp-block-template-part.alignfull {
+		Padding: 15px;
+		Grid-gap: 10px;
+	}
+	div {
+		margin: 0 15px;
 	}
 
 	.wp-site-blocks .alignfull {
