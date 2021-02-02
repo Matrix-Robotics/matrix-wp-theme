@@ -12,4 +12,4 @@ mysql:
  image: mysql:latest
  environment:
   - MYSQL_ROOT_PASSWORD=password
-  - MYSQL_DATABASE=wp-local-db
+  - MYSQL_DATABASE=matrix-wp-local-db
