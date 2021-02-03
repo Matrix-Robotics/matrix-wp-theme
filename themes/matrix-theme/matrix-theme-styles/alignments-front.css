@@ -18,15 +18,15 @@ body {
 .wp-site-blocks > *:not(.wp-block-post-content),
 .wp-site-blocks .wp-block-post-content > * {
 	max-width: var(--wp--custom--width--default);
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .wp-site-blocks .alignwide {
 	width: var(--wp--custom--width--wide);
 	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .wp-site-blocks .alignfull {
@@ -66,12 +66,12 @@ body {
 
 @media only screen and (min-width: 1200px) {
 
-	.wp-site-blocks,
 	.wp-block-template-part.alignfull {
 		Padding: 40px 120px 40px 120px;
 		Grid-gap: 15px;
 	}
-	div {
+	.wp-site-blocks div,
+	.wp-block-template-part.alignfull div {
 		margin: 0 30px;
 	}
 
@@ -84,12 +84,12 @@ body {
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
 
-	.wp-site-blocks,
 	.wp-block-template-part.alignfull {
 		Padding: 40px 60px 40px 60px;
 		Grid-gap: 15px;
 	}
-	div {
+	.wp-site-blocks div,
+	.wp-block-template-part.alignfull div {
 		margin: 0 30px;
 	}
 
@@ -101,13 +101,12 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
-
-	.wp-site-blocks,
 	.wp-block-template-part.alignfull {
 		Padding: 15px;
 		Grid-gap: 10px;
 	}
-	div {
+	.wp-site-blocks div,
+	.wp-block-template-part.alignfull div {
 		margin: 0 15px;
 	}
 

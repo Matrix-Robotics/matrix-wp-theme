@@ -7,7 +7,7 @@
 				"palette": [ ]
 			},
 			"spacing": {
-				"customPadding": true
+				"customPadding": false
 			},
 			"typography": {
 				"customLineHeight": true,
@@ -16,11 +16,11 @@
 			},
 			"custom": {
 				"width": {
-					"default": "840px",
-					"wide": "1100px"
+					"default": "",
+					"wide": ""
 				},
 				"margin": {
-					"horizontal": "14px"
+					"horizontal": "0px"
 				}
 			}
 		},
