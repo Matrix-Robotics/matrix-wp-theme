@@ -237,10 +237,6 @@ a:hover {
 .wp-block h6 {
 	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
-	font-weight: var(--wp--preset--font-weight--heading);
-	letter-spacing: -0.0415625em;
-	line-height: var(--wp--preset--line-height--heading);
-	margin: 40px 0 25px;
 }
 
 .editor-post-title__block .editor-post-title__input,

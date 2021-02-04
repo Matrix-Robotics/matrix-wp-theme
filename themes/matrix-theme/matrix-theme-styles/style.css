@@ -246,27 +246,27 @@ path {
 }
 
 /* ----------------------------------------------
-Inter variable font. Usage:
+Montserrat font. Usage:
 
 @supports (font-variation-settings: normal) {
 	html { font-family: 'Inter var', sans-serif; }
 }
 ---------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
 @font-face {
-	font-family: "Inter var";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-	font-style: normal;
-	font-display: swap;
-	src: url(./assets/fonts/inter/Inter-upright-var.woff2) format("woff2");
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-style: bold;
+	src: url(../assets/fonts/montserrat/Montserrat-SemiBold.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: "Inter var";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-	font-style: italic;
-	font-display: swap;
-	src: url(./assets/fonts/inter/Inter-italic-var.woff2) format("woff2");
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-style: normal;
+	src: url(../assets/fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
 }
 
 
@@ -3027,8 +3027,8 @@ h2.entry-title {
 
 .wp-block-columns.alignfull,
 .alignfull:not(.has-background) .wp-block-columns {
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
 }
 
 .wp-block-column {
@@ -4317,27 +4317,26 @@ div.comment:first-of-type {
 
 
 .footer-nav-widgets-wrapper,
-#site-footer, .site-footer {
+.site-footer {
+	color: #ffffff;
 	background-color: #000000;
 	border-color: #000000;
 	border-style: solid;
 	border-width: 0;
 }
 
+/*
 .site-footer .alignfull, .site-footer hr.wp-block-separator {
-	margin: 4rem auto 0;
+	margin: 0rem auto 0;
 }
+*/
 
 .site-footer h3 {
 	margin-top: 0;
 }
 
-.site-footer .footer-menu a {
-	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.site-footer .wp-block-jetpack-layout-grid .wp-block-jetpack-layout-grid-column.wp-block-jetpack-layout-grid__padding-huge {
-	padding: 0 48px;
+.site-footer {
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .footer-top-visible .footer-nav-widgets-wrapper,
@@ -4356,6 +4355,15 @@ div.comment:first-of-type {
 	padding: 3rem 0;
 }
 
+
+/* Footer Elements -------------------------------- */
+
+.footer-el {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: space-around;
+}
 
 /* Footer Top -------------------------------- */
 
@@ -4438,25 +4446,6 @@ ul.footer-social li {
 }
 
 /* Footer Bottom ----------------------------- */
-
-#site-footer {
-	font-size: 1.6rem;
-}
-
-#site-footer .section-inner {
-	align-items: baseline;
-	display: flex;
-	justify-content: space-between;
-}
-
-#site-footer a {
-	text-decoration: none;
-}
-
-#site-footer a:focus,
-#site-footer a:hover {
-	text-decoration: underline;
-}
 
 .footer-copyright a,
 .powered-by-wordpress a {

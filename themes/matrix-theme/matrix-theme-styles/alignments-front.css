@@ -64,14 +64,15 @@ body {
 	max-width: 360px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1240px) {
 
-	.wp-block-template-part.alignfull {
-		Padding: 40px 120px 40px 120px;
-		Grid-gap: 15px;
+	.wp-block-template-part {
+		padding: 40px 120px 40px 120px;
+		row-gap: 15px;
+		column-gap: 15px;
 	}
 	.wp-site-blocks div,
-	.wp-block-template-part.alignfull div {
+	.wp-block-template-part div {
 		margin: 0 30px;
 	}
 
@@ -79,17 +80,22 @@ body {
 		transform: translateX(0px);
 		width: 100%;
 		max-width: 100%;
+	}
+
+	.footer-el + .footer-el {
+		margin-top: 47px;
 	}
 }
 
-@media only screen and (max-width: 1199px) and (min-width: 992px) {
+@media only screen and (max-width: 1239px) and (min-width: 992px) {
 
-	.wp-block-template-part.alignfull {
-		Padding: 40px 60px 40px 60px;
-		Grid-gap: 15px;
+	.wp-block-template-part {
+		padding: 40px 60px 40px 60px;
+		row-gap: 15px;
+		column-gap: 15px;
 	}
 	.wp-site-blocks div,
-	.wp-block-template-part.alignfull div {
+	.wp-block-template-part div {
 		margin: 0 30px;
 	}
 
@@ -97,16 +103,21 @@ body {
 		transform: translateX(0px);
 		width: 100%;
 		max-width: 100%;
+	}
+
+	.footer-el + .footer-el {
+		margin-top: 45px;
 	}
 }
 
 @media only screen and (max-width: 991px) {
-	.wp-block-template-part.alignfull {
-		Padding: 15px;
-		Grid-gap: 10px;
+	.wp-block-template-part {
+		padding: 15px;
+		row-gap: 10px;
+		column-gap: 10px;
 	}
 	.wp-site-blocks div,
-	.wp-block-template-part.alignfull div {
+	.wp-block-template-part div {
 		margin: 0 15px;
 	}
 
@@ -114,5 +125,9 @@ body {
 		transform: translateX(0px);
 		width: 100%;
 		max-width: 100%;
+	}
+
+	.footer-el + .footer-el {
+		margin-top: 30px;
 	}
 }
