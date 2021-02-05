@@ -24,7 +24,14 @@ if ( ! function_exists( 'matrix_theme_support' ) ) :
 		// Add support for custom units.
 		add_theme_support( 'custom-units' );
 	}
+
+	function theme_add_woocommerce_support() {
+		add_theme_support( 'woocommerce' );
+	}
+
 	add_action( 'after_setup_theme', 'matrix_theme_support' );
+
+	add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
 endif;
 
 /**
