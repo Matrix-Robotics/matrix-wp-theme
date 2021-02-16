@@ -4353,10 +4353,68 @@ footer {
 	font-size: var(--font-size-m);
 }
 
-.footer-bottom {
+#footer-bottom {
 	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: var(--font-size-s);
 }
+
+
+/* Footer Accordion -------------------------------- */
+
+.footer-accordion{
+	transform: translateZ(0);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.footer-accordion > .footer-accordion-toggle{
+	position: absolute;
+	opacity: 0;
+	display: none;
+}
+
+.footer-accordion > label{
+	position: relative;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: 700;
+	border-top: 1px solid #ddd;
+	cursor: pointer;
+}
+
+.footer-accordion > label:after {
+  content: '\f078';
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-family: fontawesome;
+  transform: rotate(90deg);
+  transition: .3s transform;
+}
+
+.footer-accordion > section{
+	height: 0;
+	transition: .3s all;
+	overflow: hidden;
+}
+
+.footer-accordion > .footer-accordion-toggle:checked ~ label:after{
+ transform: rotate(0deg);
+}
+
+.footer-accordion > .footer-accordion-toggle:checked ~ section{
+  height: 200px;
+}
+
+.footer-accordion > section p {
+  margin: 15px 0;
+  padding: 0 20px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 
 
 /* Footer Elements -------------------------------- */
