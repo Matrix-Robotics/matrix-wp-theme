@@ -679,35 +679,6 @@ input[type="checkbox"] + label {
 	margin-left: 0.5rem;
 }
 
-input[type="checkbox"] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	position: relative;
-	top: 2px;
-	display: inline-block;
-	margin: 0;
-	width: 1.5rem;
-	min-width: 1.5rem;
-	height: 1.5rem;
-	background: #fff;
-	border-radius: 0;
-	border-style: solid;
-	border-width: 0.1rem;
-	border-color: #dcd7ca;
-	box-shadow: none;
-	cursor: pointer;
-}
-
-input[type="checkbox"]:checked::before {
-	/* Use the "Yes" SVG Dashicon */
-	content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%23000000%27%2F%3E%3C%2Fsvg%3E");
-	position: absolute;
-	display: inline-block;
-	margin: -0.1875rem 0 0 -0.25rem;
-	height: 1.75rem;
-	width: 1.75rem;
-}
-
 input,
 textarea,
 button,
@@ -4361,60 +4332,80 @@ footer {
 
 /* Footer Accordion -------------------------------- */
 
-.footer-accordion{
-	transform: translateZ(0);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
 
-.footer-accordion > .footer-accordion-toggle{
-	position: absolute;
-	opacity: 0;
-	display: none;
-}
-
-.footer-accordion > label{
+.accordion-el {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin: 10px auto 30px auto;
 	position: relative;
-	display: block;
-	height: 50px;
-	line-height: 50px;
-	padding: 0 20px;
-	font-size: 14px;
-	font-weight: 700;
-	border-top: 1px solid #ddd;
+}
+.accordion-el article p { margin: 10px 15px 15px 15px; }
+.accordion-el input[type=checkbox] {
+	background-color: transparent;
+	height: 1px;
+	position: absolute;
+	width: 1px;
+	margin: 4px 0 0 0;
+	outline: none;
+}
+.accordion-el input[type=checkbox] + label {
+	background: inherit;
+	color: inherit;
 	cursor: pointer;
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 32px;
+	padding: 10px 15px;
+	position: relative;
+	z-index: 20;
+}
+.accordion-el input[type=checkbox] + label:before,
+.accordion-el input[type=checkbox] + label:after {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+}
+.accordion-el input[type=checkbox] + label:after {
+	content: "\f054";
+	float: right;
+	padding-left: 10px;
 }
 
-.footer-accordion > label:after {
-  content: '\f078';
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  font-family: fontawesome;
-  transform: rotate(90deg);
-  transition: .3s transform;
+.accordion-el input[type=checkbox]:checked + label:after {
+	  -webkit-transform: rotate(90deg);
+		 -moz-transform: rotate(90deg);
+		  -ms-transform: rotate(90deg);
+		   -o-transform: rotate(90deg);
+			  transform: rotate(90deg);
 }
-
-.footer-accordion > section{
+.accordion-el input[type=checkbox] + label ~ .accordion-menu {
+	display: none;
+	/* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
 	height: 0;
-	transition: .3s all;
+	max-height: 0;
 	overflow: hidden;
+	/* 0, 0, hidden; - Content is ignored by screen readers, but tab key still steps through hidden elements */
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
 }
-
-.footer-accordion > .footer-accordion-toggle:checked ~ label:after{
- transform: rotate(0deg);
+.accordion-el input[type=checkbox]:checked + label ~ .accordion-menu {
+	display: block;
+	height: auto;
+	max-height: 2000px;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
 }
-
-.footer-accordion > .footer-accordion-toggle:checked ~ section{
-  height: 200px;
-}
-
-.footer-accordion > section p {
-  margin: 15px 0;
-  padding: 0 20px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
 
 
 /* Footer Elements -------------------------------- */
@@ -4676,7 +4667,7 @@ a.to-the-top > * {
 
 	ul,
 	ol {
-		margin-bottom: 4rem;
+		margin-bottom: 0rem;
 	}
 
 	pre {
