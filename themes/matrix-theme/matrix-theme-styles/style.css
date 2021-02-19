@@ -666,17 +666,10 @@ legend {
 }
 
 label {
-	display: block;
-	font-size: 1.6rem;
-	font-weight: 400;
-	margin: 0 0 0.5rem 0;
 }
 
 label.inline,
 input[type="checkbox"] + label {
-	display: inline;
-	font-weight: 400;
-	margin-left: 0.5rem;
 }
 
 input,
@@ -4340,9 +4333,9 @@ footer {
 	margin: 10px auto 30px auto;
 	position: relative;
 }
-.accordion-el article p { margin: 10px 15px 15px 15px; }
 .accordion-el input[type=checkbox] {
 	background-color: transparent;
+	display: none;
 	height: 1px;
 	position: absolute;
 	width: 1px;
@@ -4354,36 +4347,25 @@ footer {
 	color: inherit;
 	cursor: pointer;
 	display: block;
-	font-size: 18px;
 	font-weight: normal;
-	line-height: 32px;
-	padding: 10px 15px;
 	position: relative;
-	z-index: 20;
 }
 .accordion-el input[type=checkbox] + label:before,
 .accordion-el input[type=checkbox] + label:after {
 	display: inline-block;
-	font-family: FontAwesome;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: normal;
-	text-decoration: inherit;
 }
 .accordion-el input[type=checkbox] + label:after {
-	content: "\f054";
+	content: url('data:image/svg+xml; utf8, <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10L20 2L18 2.88487e-06L10 8L1.99999 2.14648e-07L-7.60554e-06 2L8 10L10 12L12 10Z" fill="white"/></svg>');
 	float: right;
-	padding-left: 10px;
 }
-
 .accordion-el input[type=checkbox]:checked + label:after {
-	  -webkit-transform: rotate(90deg);
-		 -moz-transform: rotate(90deg);
-		  -ms-transform: rotate(90deg);
-		   -o-transform: rotate(90deg);
-			  transform: rotate(90deg);
+	  -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		  -ms-transform: rotate(180deg);
+		   -o-transform: rotate(180deg);
+			  transform: rotate(180deg);
 }
-.accordion-el input[type=checkbox] + label ~ .accordion-menu {
+.accordion-el input[type=checkbox] + label ~ .accordion-list {
 	display: none;
 	/* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
 	height: 0;
@@ -4396,7 +4378,7 @@ footer {
 	-ms-transition: all 1.5s ease-in-out;
 	transition: all 1.5s ease-in-out;
 }
-.accordion-el input[type=checkbox]:checked + label ~ .accordion-menu {
+.accordion-el input[type=checkbox]:checked + label ~ .accordion-list {
 	display: block;
 	height: auto;
 	max-height: 2000px;
@@ -4405,6 +4387,10 @@ footer {
 	-o-transition: all 1.5s ease-in-out;
 	-ms-transition: all 1.5s ease-in-out;
 	transition: all 1.5s ease-in-out;
+}
+
+.accordion-list li {
+	
 }
 
 
@@ -5549,9 +5535,6 @@ a.to-the-top > * {
 
 	/* Blocks -------------------------------- */
 
-	.footer-el .wp-block-column {
-		margin: 0 !important;
-	}
 }
 
 @media ( min-width: 1000px ) {

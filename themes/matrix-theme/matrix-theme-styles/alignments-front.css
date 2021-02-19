@@ -70,8 +70,17 @@ body {
 		max-width: 100%;
 	}
 
+	.footer-el .wp-block-column,
+	.accordion-el .wp-block-column {
+		margin: 0;
+	}
+
 	.footer-el + .footer-el {
 		margin-top: 47px;
+	}
+
+	.accordion-menu + .accordion-menu {
+		margin-top: 30px;
 	}
 }
 
@@ -89,8 +98,17 @@ body {
 		max-width: 100%;
 	}
 
+	.footer-el .wp-block-column,
+	.accordion-el .wp-block-column {
+		margin: 0;
+	}
+	
 	.footer-el + .footer-el {
 		margin-top: 45px;
+	}
+
+	.accordion-menu + .accordion-menu {
+		margin-top: 30px;
 	}
 }
 
@@ -107,7 +125,16 @@ body {
 		max-width: 100%;
 	}
 
+	.footer-el .wp-block-column,
+	.accordion-el .wp-block-column {
+		margin: 0;
+	}
+
 	.footer-el + .footer-el {
+		margin-top: 30px;
+	}
+
+	.accordion-menu + .accordion-menu {
 		margin-top: 30px;
 	}
 }
