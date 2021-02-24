@@ -34,6 +34,7 @@ if ( ! function_exists( 'matrix_theme_support' ) ) :
 	add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
 endif;
 
+
 /**
  * Enqueue scripts and styles.
  */
@@ -46,3 +47,13 @@ function matrix_theme_scripts() {
 	wp_enqueue_style( 'matrix-theme-alignments-style', get_template_directory_uri() . '/matrix-theme-styles/alignments-front.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'matrix_theme_scripts' );
+
+
+/**
+* Enqueue theme fonts.
+*/
+function matrix_theme_fonts() {
+	wp_enqueue_style( 'matrix-theme-fonts', get_template_directory_uri() . '/assets/css/theme-fonts.css', array(), '20200212' );
+}
+add_action( 'wp_enqueue_scripts', 'matrix_theme_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'matrix_theme_fonts', 1 );

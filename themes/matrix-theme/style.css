@@ -15,7 +15,7 @@ matrix theme is distributed under the terms of the GNU GPL.
 */
 
 /* --- Import main style ---- */
-@import url('matrix-theme-styles/style.css');
+@import url('assets/css/style.css');
 
 /* --- Insert appendant style after this line ------- */
 
