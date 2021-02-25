@@ -14,8 +14,11 @@ Text Domain: matrix-theme
 matrix theme is distributed under the terms of the GNU GPL.
 */
 
-/* --- Import main style ---- */
+
+/* --- Import Main Style------- */
+
 @import url('assets/css/style.css');
 
-/* --- Insert appendant style after this line ------- */
+
+/* --- Insert Appendant Style Below------- */
 
