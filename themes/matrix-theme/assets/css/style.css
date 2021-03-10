@@ -32,15 +32,19 @@ matrix theme is distributed under the terms of the GNU GPL.
 # - Footer
 # - Media
 # - Blocks
+# - Plugins
 # - Media Queries
 
 ----------------------------------------------------------------------------- */
+
+
 
 /*--------------------------------------------------------------
 # - Normalize
 --------------------------------------------------------------*/
 
 @import url('sanitize.css');
+
 /*--------------------------------------------------------------
 # - CSS Variables
 ------------------------------------------------------------- */
@@ -58,6 +62,7 @@ matrix theme is distributed under the terms of the GNU GPL.
 	--button-color: #034;
 	--button-hover-color: #268f97;
 	--header-background-color: #034381;
+	--header-menu-color: #003568;
 	--header-text-color: #ffffff;
 	--header-text-hover-color: rgba(255, 255, 255, 0.5);
 	--header-border-color: rgba(255, 255, 255, 0.1);
@@ -367,7 +372,7 @@ header {
 	display: flex;
 	width: 155px;
 	height: 49px;
-	background-image: url('../images/logo.svg');
+	background-image: url('../images/icons/logo.svg');
 	background-size: 155px 49px;
 }
 
@@ -382,7 +387,6 @@ header {
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: flex-end;
-	gap: 32px;
 }
 
 .nav-menu input {
@@ -393,10 +397,12 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	transition: opacity 0.2 ease-out;
 	gap: 24px;
 }
 
 .nav-list-icons {
+	margin: 0 30px;
 	gap: 9px;
 }
 
@@ -412,6 +418,8 @@ header {
 /*--------------------------------------------------------------
 # - Navigation
 --------------------------------------------------------------*/
+
+
 
 /*--------------------------------------------------------------
 # - Posts and pages
@@ -634,6 +642,8 @@ a.to-the-top>* {
 # - Media
 --------------------------------------------------------------*/
 
+
+
 /*--------------------------------------------------------------
 # - Blocks
 --------------------------------------------------------------*/
@@ -681,6 +691,109 @@ a.to-the-top>* {
 .aligncenter {
 	text-align: center;
 }
+
+
+/*--------------------------------------------------------------
+# - Plugins
+--------------------------------------------------------------*/
+
+
+/* Ivory Search ---------------------------- */
+
+.nav-search {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 10.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0zm-.787 5.834a7.5 7.5 0 111.375-1.453l3.94 3.94-1.414 1.415-3.9-3.902z' fill='%23fff'/%3E%3C/svg%3E");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.nav-search-esc {
+	display: none;
+	position: absolute;
+    top: 50%;
+	right: 15px;
+    transform: translateY(-50%);
+	z-index: 1;
+}
+
+#is-search-input-65 {
+	color: #ffffff;
+	overflow: hidden;
+	transition: width 0.3s ease-out;
+	width: 0px;
+	height: 0px;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	padding: 0 60px;
+	margin: 0;
+	border: 0!important;
+	opacity: 0;
+	background-color: var(--header-menu-color);
+}
+
+#is-search-input-65::placeholder {
+	color: var(--header-text-color);
+	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-navItem);
+}
+
+.is-search-form {
+	display: flex;
+	background-color: var(--header-menu-color);
+}
+
+.is-search-form::before {
+	position: absolute;
+    top: 50%;
+	left: 20px;
+    transform: translateY(-50%);
+	content: url('../images/icons/search.svg');
+	width: 24px;
+	height: 24px;
+	z-index: 5;
+}
+
+.search-btn[type=checkbox]:checked ~ .nav-list {
+	display: none;
+}
+
+.search-btn[type=checkbox]:checked ~ p >.nav-search-esc {
+	display: block;
+}
+
+.search-btn[type=checkbox]:checked ~ .is-search-form > label > #is-search-input-65 {
+	width: 500px;
+	height: 77px;
+	opacity: 1;
+}
+
+.search-btn[type=checkbox]:not(:checked) ~ .is-search-form > label > #is-search-input-65 {
+	width: 0px;
+	height: 0px;
+	transition: width 0s ease-out;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	border: 0!important;
+	opacity: 0;
+	color: var(--header-text-color);
+	background-color: var(--header-menu-color);
+}
+
+.search-btn[type=checkbox]:not(:checked) ~ .is-search-form > label > .is-screen-reader-text{
+	display: none!important;
+}
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # - Media Queries
@@ -1549,39 +1662,6 @@ button.toggle {
 .wp-block-image.is-resized {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-/* Search Form ------------------------------- */
-
-.search-form {
-	align-items: stretch;
-	display: flex;
-	flex-wrap: nowrap;
-	margin: 0 0 -0.8rem -0.8rem;
-}
-
-.search-form .search-field, .search-form .search-submit {
-	margin: 0 0 0.8rem 0.8rem;
-}
-
-.search-form label {
-	align-items: stretch;
-	display: flex;
-	font-size: inherit;
-	margin: 0;
-	width: 100%;
-}
-
-.search-form .search-field {
-	width: 100%;
-}
-
-.search-form .search-submit {
-	flex-shrink: 0;
-}
-
-.search-form .search-submit:focus, .search-form .search-submit:hover {
-	text-decoration: none;
 }
 
 /* Social Icons ------------------------------ */
