@@ -58,7 +58,7 @@ matrix theme is distributed under the terms of the GNU GPL.
 	--gray-color: #848484;
 	--dark-gray-color: #242424;
 	--link-color: #268f97;
-	--link-hover-color: #dcdddd;
+	--link-hover-color: #cdcdcd;
 	--button-color: #034;
 	--button-hover-color: #268f97;
 	--header-background-color: #034381;
@@ -302,7 +302,7 @@ a:hover, a:focus, a:active {
 }
 
 a:focus {
-	outline: thin dotted;
+	outline: none;
 }
 
 a:hover, a:active {
@@ -382,6 +382,11 @@ header {
 	align-items: center;
 }
 
+
+/*--------------------------------------------------------------
+# - Navigation
+--------------------------------------------------------------*/
+
 .nav-menu {
 	display: flex;
 	flex-wrap: nowrap;
@@ -391,6 +396,34 @@ header {
 
 .nav-menu input {
 	display: none;
+}
+
+.nav-icon {
+	width: 32px;
+	height: 32px;
+}
+
+.nav-icon:hover {
+	display: block;
+	background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23fff' fill-opacity='.25'/%3E%3C/svg%3E");
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.nav-icon:active {
+	display: block;
+	background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23000' fill-opacity='.25'/%3E%3C/svg%3E");
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.nav-icon a svg {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 }
 
 .nav-list {
@@ -403,10 +436,10 @@ header {
 
 .nav-list-icons {
 	margin: 0 30px;
-	gap: 9px;
+	gap: 1px;
 }
 
-.nav-list>.nav-sub {
+.nav-list > .nav-sub {
 	font-family: "Montserrat-500", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: var(--font-size-navItem);
 }
@@ -414,11 +447,6 @@ header {
 .nav-media-s {
 	display: none;
 }
-
-/*--------------------------------------------------------------
-# - Navigation
---------------------------------------------------------------*/
-
 
 
 /*--------------------------------------------------------------
@@ -433,8 +461,6 @@ footer {
 	color: var(--footer-text-color);
 	background-color: var(--footer-background-color);
 }
-
-.footer-title {}
 
 .footer-menu-title {
 	margin-bottom: 15px;
@@ -701,9 +727,16 @@ a.to-the-top>* {
 /* Ivory Search ---------------------------- */
 
 .nav-search {
+	display: flex;
+	height: 77px;
+	background-color: var(--header-background-color);
+}
+
+.nav-search-icon {
 	display: block;
-	width: 24px;
-	height: 24px;
+	cursor: pointer;
+	width: 32px;
+	height: 77px;
 	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 10.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0zm-.787 5.834a7.5 7.5 0 111.375-1.453l3.94 3.94-1.414 1.415-3.9-3.902z' fill='%23fff'/%3E%3C/svg%3E");
 	background-size: 24px 24px;
 	background-repeat: no-repeat;
@@ -712,12 +745,15 @@ a.to-the-top>* {
 
 .nav-search-esc {
 	display: none;
-	position: absolute;
-    top: 50%;
-	right: 15px;
-    transform: translateY(-50%);
-	z-index: 1;
+	cursor: pointer;
 }
+
+.nav-search-esc > svg {
+	position: absolute;
+	top: 50%;
+	right: 145px;
+	transform: translateY(-50%);
+}	
 
 #is-search-input-65 {
 	color: #ffffff;
@@ -747,6 +783,7 @@ a.to-the-top>* {
 }
 
 .is-search-form::before {
+	display: none;
 	position: absolute;
     top: 50%;
 	left: 20px;
@@ -757,16 +794,27 @@ a.to-the-top>* {
 	z-index: 5;
 }
 
-.search-btn[type=checkbox]:checked ~ .nav-list {
+.search-btn[type=checkbox]:checked ~ .nav-list > .nav-sub,
+.search-btn[type=checkbox]:checked ~ .nav-list-icons > .nav-search > .nav-search-icon {
 	display: none;
 }
 
-.search-btn[type=checkbox]:checked ~ p >.nav-search-esc {
+.search-btn[type=checkbox]:checked ~ .is-search-form::before,
+.search-btn[type=checkbox]:checked ~ .nav-list-icons > .nav-search > .nav-search-esc {
 	display: block;
 }
 
+.search-btn[type=checkbox]:checked ~ .nav-list-icons {
+	margin: 0 30px 0 0;
+}
+
+.search-btn[type=checkbox]:checked ~ .nav-list-icons > .nav-search {
+	background-image: none;
+	background-color: var(--header-menu-color);
+}
+
 .search-btn[type=checkbox]:checked ~ .is-search-form > label > #is-search-input-65 {
-	width: 500px;
+	width: 350px;
 	height: 77px;
 	opacity: 1;
 }
@@ -789,10 +837,6 @@ a.to-the-top>* {
 .search-btn[type=checkbox]:not(:checked) ~ .is-search-form > label > .is-screen-reader-text{
 	display: none!important;
 }
-
-
-
-
 
 
 /*--------------------------------------------------------------
