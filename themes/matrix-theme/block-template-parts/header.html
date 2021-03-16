@@ -10,7 +10,7 @@
 			<!-- /wp:column -->
 			<!-- wp:column -->
 			<div class="wp-block-column nav-menu">
-				<input type="checkbox" name="button" id="search-btn" class="search-btn">
+				<input type="checkbox" name="button" id="search-btn">
 				<ul class="nav-list reset-list-style">
 					<li class="nav-sub"><a href="/store">Store</a>
 						<div class="nav-dd">
@@ -127,10 +127,10 @@
 					</li>
 					<li class="nav-icon"><a href="/" target="_blank" rel="noopener noreferrer"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 8a2 2 0 100-4 2 2 0 000 4zm0 2a4 4 0 100-8 4 4 0 000 8zM4 16a5 5 0 015-5h6a5 5 0 015 5v5h-2v-5a3 3 0 00-3-3H9a3 3 0 00-3 3v5H4v-5z" fill="#fff"/></svg></a></li>
 					<li class="nav-icon"><a href="/" target="_blank" rel="noopener noreferrer"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 5a3 3 0 013-3h2a3 3 0 013 3v5a1 1 0 11-2 0V8h-3V6h3V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5a1 1 0 11-2 0V8H6v10h12V8h-1V6h3v14H4V6h4V5z" fill="#fff"/><circle cx="16" cy="7" r="5" fill="#D30000"/><text x="14" y="9"  fill="#FFFFFF" style='font-family: "IBM Plex Mono-600"; font-size: 7px;'></text></svg></a></li>
-					<li class="nav-icon i18n-icon"><a href="/"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.024 13c.104 2.111.532 4.002 1.17 5.415A7.008 7.008 0 015.071 13h2.953zm2.003 0c.1 1.846.474 3.431.972 4.552.294.661.593 1.073.823 1.292.082.078.14.12.178.14a.983.983 0 00.178-.14c.23-.22.529-.63.823-1.292.498-1.12.871-2.706.972-4.552h-3.946zm3.946-2h-3.946c.1-1.846.474-3.431.972-4.552.294-.661.593-1.073.823-1.292a.988.988 0 01.178-.14.988.988 0 01.178.14c.23.22.529.63.823 1.292.498 1.12.871 2.706.972 4.552zm2.003 2c-.104 2.111-.532 4.002-1.17 5.415A7.008 7.008 0 0018.928 13h-2.953zm2.953-2h-2.953c-.104-2.111-.532-4.002-1.17-5.415A7.008 7.008 0 0118.928 11zM8.024 11H5.071a7.008 7.008 0 014.123-5.415C8.556 6.998 8.128 8.889 8.024 11zM21 12a9 9 0 10-18 0 9 9 0 0018 0z" fill="#fff"/></svg></a>
+					<li class="nav-icon i18n-icon"><label class="nav-i18n-icon" for="i18n-btn"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.024 13c.104 2.111.532 4.002 1.17 5.415A7.008 7.008 0 015.071 13h2.953zm2.003 0c.1 1.846.474 3.431.972 4.552.294.661.593 1.073.823 1.292.082.078.14.12.178.14a.983.983 0 00.178-.14c.23-.22.529-.63.823-1.292.498-1.12.871-2.706.972-4.552h-3.946zm3.946-2h-3.946c.1-1.846.474-3.431.972-4.552.294-.661.593-1.073.823-1.292a.988.988 0 01.178-.14.988.988 0 01.178.14c.23.22.529.63.823 1.292.498 1.12.871 2.706.972 4.552zm2.003 2c-.104 2.111-.532 4.002-1.17 5.415A7.008 7.008 0 0018.928 13h-2.953zm2.953-2h-2.953c-.104-2.111-.532-4.002-1.17-5.415A7.008 7.008 0 0118.928 11zM8.024 11H5.071a7.008 7.008 0 014.123-5.415C8.556 6.998 8.128 8.889 8.024 11zM21 12a9 9 0 10-18 0 9 9 0 0018 0z" fill="#fff"/></svg></label>
+						<input type="checkbox" id="i18n-btn">
 						<div class="i18n-dd">
-							<!-- wp:column -->
-							<div class="wp-block-column" style="flex-basis: 100%">
+							<div class="i18n-dd-sub" style="flex-basis: 100%">
 								<h4 class="i18n-title">Language</h4>
 								<select>
 									<option selected disabled>Choose your language</option>
@@ -138,8 +138,7 @@
 									<option value="2">Traditional Chinese</option>
 								</select>
 							</div>
-							<!-- /wp:column --><!-- wp:column -->
-							<div class="wp-block-column" style="flex-basis: 100%">
+							<div class="i18n-dd-sub" style="flex-basis: 100%">
 								<h4 class="i18n-title">Currency</h4>
 								<select>
 									<option selected disabled>Choose your currency</option>
@@ -147,11 +146,10 @@
 									<option value="2">NTD</option>
 								</select>
 							</div>
-							<!-- /wp:column -->
 						</div>
 					</li>
 				</ul>
-				<input id="nt" type="checkbox"><label class="nav-menu-icon nav-media-s" for="nt"><svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 10h32v4H8v-4zm0 12h32v4H8v-4zm32 12H8v4h32v-4z" fill="#fff"/></svg></label>
+				<input id="nt" type="checkbox" checked><label class="nav-menu-icon nav-media-s" for="nt"><svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 10h32v4H8v-4zm0 12h32v4H8v-4zm32 12H8v4h32v-4z" fill="#fff"/></svg></label>
 			</div>
 			<!-- /wp:column -->
 		</div>
