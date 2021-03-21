@@ -12,7 +12,8 @@
     mobileMenuToggle    = masthead.find( '#menu-btn' );
     mobileMenu          = masthead.find( '.nav-menu-mobile' );
     i18nToggle          = masthead.find( '#i18n-btn' );
-    i18nIcon            = masthead.find( '.i18n-icon' )
+    i18nIcon            = masthead.find( '.i18n-icon' );
+    cartLIcon           = masthead.find( '.cart-icon-desktop' );
     
     i18nToggle.change(function() {
         if ($(this).is(':checked')) {
@@ -25,8 +26,10 @@
     mobileMenuToggle.change(function() {
         if ($(this).is(':checked')) {
             mobileMenu.addClass('flexbox');
+            cartLIcon.addClass('hidden');
         } else {
             mobileMenu.removeClass('flexbox');
+            cartLIcon.removeClass('hidden');
         }
     });
 
