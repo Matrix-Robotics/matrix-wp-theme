@@ -22,7 +22,6 @@ matrix theme is distributed under the terms of the GNU GPL.
 # - CSS Variables
 # - Typography
 # - Elements
-# - Forms
 # - Accessibility
 # - Alignments
 # - Layout Structure
@@ -34,9 +33,9 @@ matrix theme is distributed under the terms of the GNU GPL.
 # - Blocks
 # - Plugins
 # - Media Queries
+# - Jquery
 
 ----------------------------------------------------------------------------- */
-
 
 
 /*--------------------------------------------------------------
@@ -313,10 +312,6 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# - Forms
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 # - Accessibility
 --------------------------------------------------------------*/
 
@@ -343,6 +338,7 @@ a:hover, a:active {
 	margin-right: auto;
 	margin-left: auto;
 }
+
 
 /*--------------------------------------------------------------
 # - Layout Structure
@@ -382,8 +378,9 @@ header {
 
 .header-el {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-items: center;
+	align-content: flex-start;
 }
 
 
@@ -396,9 +393,10 @@ header {
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: flex-end;
+	margin: 0!important;
 }
 
-.nav-menu input {
+.header-el input {
 	display: none;
 }
 
@@ -439,6 +437,12 @@ header {
 	transition: opacity 0.2 ease-out;
 }
 
+.nav-list-icons {
+	margin: 0 30px 0 18px;
+	gap: 1px;
+	z-index: 10;
+}
+
 .nav-sub {
 	display: flex;
 }
@@ -450,14 +454,13 @@ header {
 	line-height: 77px;
 }
 
+.nav-sub > a > label {
+	display: none;
+}
+
 .nav-sub:hover {
 	cursor: pointer;
 	background-color: var(--header-menu-color);
-}
-
-.nav-list-icons {
-	margin: 0 30px 0 18px;
-	gap: 1px;
 }
 
 .nav-list > .nav-sub {
@@ -476,6 +479,18 @@ header {
     width: calc(100% + 120px);
 	background: var(--header-menu-color);
 	background-size: cover;
+}
+
+#menu-btn[type=checkbox]:checked ~ .nav-list {
+	display: flex;
+}
+
+#menu-btn[type=checkbox]:checked ~ .nav-menu-icon {
+	display: none;
+}
+
+#menu-btn[type=checkbox]:not(:checked) ~ .nav-esc-icon {
+	display: none;
 }
 
 .nav-i18n-icon {
@@ -543,9 +558,6 @@ header {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.nav-media-s {
-	display: none;
-}
 
 /* Navigation Font -------------------------------- */
 
@@ -786,7 +798,6 @@ a.to-the-top>* {
 --------------------------------------------------------------*/
 
 
-
 /*--------------------------------------------------------------
 # - Blocks
 --------------------------------------------------------------*/
@@ -839,7 +850,6 @@ a.to-the-top>* {
 /*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
-
 
 /* Ivory Search ---------------------------- */
 
@@ -955,7 +965,6 @@ a.to-the-top>* {
 	display: none!important;
 }
 
-
 /*--------------------------------------------------------------
 # - Media Queries
 --------------------------------------------------------------*/
@@ -986,12 +995,11 @@ a.to-the-top>* {
 	.accordion-menu+.accordion-menu {
 		margin-top: 30px;
 	}
-	.nav-media-l {
-		display: flex;
-	}
+	.nav-media-l,
 	.sitemap-media-l {
 		display: flex;
 	}
+	.nav-media-s,
 	.sitemap-media-s {
 		display: none;
 	}
@@ -1004,10 +1012,114 @@ a.to-the-top>* {
 		max-width: 100%;
 	}
 	header.wp-block-template-part {
-		height: 85px;
-		padding: 40px 120px;
+		height: 86px;
+		padding: 0 24px 0 60px;
 		row-gap: 15px;
 		column-gap: 15px;
+	}
+	.nav-logo {
+		flex-basis: 33.33%;
+	}
+	.nav-menu.nav-media-s {
+		flex-basis: 66.67%;
+	}
+	.nav-menu.nav-menu-mobile.nav-media-l {
+		flex-basis: 100%;
+	}
+	.nav-menu-mobile {
+		display: flex;
+		flex-basis: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding: 60px 0;
+		position: absolute;
+		top: calc(100% - 0.5px);
+		left: -60px;
+		width: 100vw;
+		height: calc(100vw - 86px);
+		background: var(--header-background-color);
+		background-size: cover;
+	}
+		.nav-sub {
+			display: flex;
+			position: relative;
+			width: 366px;
+		}
+		.nav-sub > a {
+			height: 64px;
+			padding: 0;
+			text-align: center;
+			line-height: 64px;
+		}
+		.nav-sub:hover {
+			cursor: pointer;
+			background-color: var(--header-menu-color);
+		}
+		.nav-sub > a > label {
+			display: inline;
+			width: 100%;
+			height: 100%;
+		}
+		.nav-sub > a > label:after {
+			content: url('data:image/svg+xml; utf8, <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M30 22l-8-8-2 2 8 8-8 8 2 2 8-8 2-2-2-2z" fill="#fff"/></svg>');
+			position: absolute;
+			float: right;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+			pointer-events: none;
+			z-index: 100;
+		}
+		.nav-sub:hover > .nav-dd {
+			display: flex;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			gap: 45px;
+			margin: auto;
+			padding: 150px 120px 50px 120px;
+			position: fixed;
+			top: calc(0px - 19px);
+			left: calc(366px - 60px);
+			width: calc(100vw - 366px);
+			height: 100vw;	
+			background: var(--header-menu-color);
+			background-size: cover;
+			z-index: 1;
+		}
+		.nav-dd > .wp-block-column {
+			flex-basis: 100%!important;
+		}
+		.nav-dd-title {
+			margin-bottom: 25px;
+		}
+		.nav-dd-sub {
+			margin-bottom: 15px;
+		}
+		.nav-list > .nav-sub {
+			font-family: "Montserrat-500", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: var(--font-size-navItem);
+		}
+		.nav-list-items {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.nav-list-items > .nav-sub {
+			padding-left: 60px;
+		}
+		.nav-icon:hover,
+		.nav-icon:active,
+		.nav-icon.click-label {
+			background-image: none;
+		}
+
+	.nav-list-icons {
+		margin: 0;
+		gap: 12px;
+	}
+	.nav-icon {
+		width: 48px;
+		height: 48px;
 	}
 	.nav-dd, .i18n-dd {
 		display: none;
@@ -1028,11 +1140,14 @@ a.to-the-top>* {
 	.accordion-menu+.accordion-menu {
 		margin-top: 30px;
 	}
+	.nav-media-l,
 	.sitemap-media-l {
 		display: none;
 	}
+	.nav-media-s,
 	.sitemap-media-s {
 		display: flex;
+
 	}
 }
 
@@ -1067,13 +1182,54 @@ a.to-the-top>* {
 	.accordion-menu+.accordion-menu {
 		margin-top: 30px;
 	}
+	.nav-media-l,
 	.sitemap-media-l {
 		display: none;
 	}
+	.nav-media-s,
 	.sitemap-media-s {
 		display: flex;
 	}
 }
+
+/*--------------------------------------------------------------
+# - Jquery
+--------------------------------------------------------------*/
+
+.flexbox {
+	display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -------------------------------------------------------------------------- */
 
@@ -4211,3 +4367,4 @@ div.comment:first-of-type {
 
 /*	17. Media Queries
 /* -------------------------------------------------------------------------- */
+

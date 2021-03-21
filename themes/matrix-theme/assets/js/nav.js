@@ -6,11 +6,13 @@
 
 (function( $ ) {
 
-	masthead        = $( '.wp-site-blocks .site-header' );
-	searchBarToggle = masthead.find( '#search-btn' );
-    searchBarInput  = masthead.find( '#is-search-input-65' );
-    i18nToggle      = masthead.find( '#i18n-btn' );
-    i18nIcon        = masthead.find( '.i18n-icon' )
+	masthead            = $( 'header' );
+	searchBarToggle     = masthead.find( '#search-btn' );
+    searchBarInput      = masthead.find( '#is-search-input-65' );
+    mobileMenuToggle    = masthead.find( '#menu-btn' );
+    mobileMenu          = masthead.find( '.nav-menu-mobile' );
+    i18nToggle          = masthead.find( '#i18n-btn' );
+    i18nIcon            = masthead.find( '.i18n-icon' )
     
     i18nToggle.change(function() {
         if ($(this).is(':checked')) {
@@ -20,9 +22,11 @@
         }
     });
 
-    searchBarToggle.change(function() {
+    mobileMenuToggle.change(function() {
         if ($(this).is(':checked')) {
-            searchBarInput.focus();
+            mobileMenu.addClass('flexbox');
+        } else {
+            mobileMenu.removeClass('flexbox');
         }
     });
 
