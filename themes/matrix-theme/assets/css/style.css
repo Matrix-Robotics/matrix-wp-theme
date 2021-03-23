@@ -352,6 +352,10 @@ a:hover, a:active {
 	overflow: hidden;
 }
 
+.wp-block-group__inner-container > p {
+	display: none;
+}
+
 /*--------------------------------------------------------------
 # - Header
 --------------------------------------------------------------*/
@@ -378,11 +382,11 @@ header {
 
 .header-el {
 	display: flex;
+	margin: 0;
 	flex-wrap: wrap;
 	align-items: center;
 	align-content: flex-start;
 }
-
 
 /*--------------------------------------------------------------
 # - Navigation
@@ -1121,6 +1125,11 @@ a.to-the-top>* {
 		margin: 0;
 		gap: 12px;
 	}
+	.nav-media-l > .nav-list-icons {
+		margin: 95px 0 0 0;
+		gap: 22px;
+	}
+
 	.nav-icon {
 		width: 48px;
 		height: 48px;
