@@ -33,6 +33,12 @@
         }
     });
 
+    searchBarToggle.change(function() {
+        if ($(this).is(':checked')) {
+            searchBarInput.focus();
+        }
+    });
+
     $(document).keyup(function(e) {
         if (e.keyCode === 27) {
             if ( searchBarInput.is(':focus') ) {
