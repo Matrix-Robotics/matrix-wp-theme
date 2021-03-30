@@ -19,7 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header('singular'); ?>
+wp_head();
+
+echo "<header class='wp-block-template-part'>";
+matrix_theme_get_html_template_part( 'block-template-parts/header.html' ); 
+echo "</header>";?>
 
 	<?php
 		/**
@@ -57,6 +61,7 @@ get_header('singular'); ?>
 	?>
 
 <?php
-get_footer('singular');
-
+echo "<footer class='wp-block-template-part'>";
+matrix_theme_get_html_template_part( 'block-template-parts/footer.html' );
+echo "</footer>";
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
