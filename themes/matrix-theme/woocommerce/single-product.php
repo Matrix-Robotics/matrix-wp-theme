@@ -61,6 +61,8 @@ echo "</header>";?>
 	?>
 
 <?php
+wp_footer();
+
 echo "<footer class='wp-block-template-part'>";
 matrix_theme_get_html_template_part( 'block-template-parts/footer.html' );
 echo "</footer>";
