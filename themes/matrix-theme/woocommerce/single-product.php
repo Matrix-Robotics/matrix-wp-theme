@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wp_head();
 
 echo "<header class='wp-block-template-part'>";
-matrix_theme_get_html_template_part( 'block-template-parts/header.html' ); 
+get_html_block_template_parts( 'block-template-parts/header.html' ); 
 echo "</header>";?>
 
 	<?php
@@ -51,19 +51,12 @@ echo "</header>";?>
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
-
 <?php
-wp_footer();
 
 echo "<footer class='wp-block-template-part'>";
-matrix_theme_get_html_template_part( 'block-template-parts/footer.html' );
+get_html_block_template_parts( 'block-template-parts/footer.html' );
 echo "</footer>";
+
+wp_footer();
+
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

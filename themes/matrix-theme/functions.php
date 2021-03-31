@@ -39,11 +39,20 @@ endif;
  */
 function matrix_theme_scripts() {
 	// Enqueue theme stylesheet.
-	wp_enqueue_style( 'matrix-theme-style', get_template_directory_uri() . '/assets/css/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'matrix-theme-style', get_template_directory_uri() . '/assets/css/style.css', array() );
 
 	// Register and enqueue nav.js.
 	wp_enqueue_script( 'matrix-navigation-js', get_template_directory_uri() . '/assets/js/nav.js' , array( 'jquery' ), '1.0', true );
 }
+
+/**
+ * Dequeue Gutenberg inline css.
+ */
+function remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); 
+} 
 
 /**
  * Enqueue Woocommerce stylesheet
@@ -61,23 +70,29 @@ function wp_enqueue_woocommerce_style(){
 * Enqueue theme fonts.
 */
 function matrix_theme_fonts() {
-	wp_enqueue_style( 'matrix-theme-fonts', get_template_directory_uri() . '/assets/css/theme-fonts.css', array(), '20200212' );
+	wp_enqueue_style( 'matrix-theme-fonts', get_template_directory_uri() . '/assets/css/theme-fonts.css', array() );
 }
 
 /**
 * Load FSE block template parts into classic PHP theme
 * ref: https://github.com/WordPress/gutenberg/issues/29024#issuecomment-783179297
 */
-function matrix_theme_get_html_template_part( $relative_path ) {
+function get_html_block_template_parts( $relative_path ) {
 	$path     = get_theme_file_path( $relative_path );
-	$contents = file_get_contents( $path);
+	$contents = file_get_contents( $path );
 
-	echo do_blocks( do_shortcode( $contents) );
+	echo do_blocks( do_shortcode( $contents ) );
 }
 
-add_action( 'wp_enqueue_scripts', 'matrix_theme_get_html_template_part', 1 );
+
+add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
+
+add_action( 'wp_enqueue_scripts', 'get_html_block_template_parts', 1 );
 
 add_action( 'enqueue_block_editor_assets', 'matrix_theme_fonts', 1 );
 add_action( 'wp_enqueue_scripts', 'matrix_theme_fonts', 1 );
+
 add_action( 'wp_enqueue_scripts', 'matrix_theme_scripts' );
 add_action( 'wp_enqueue_scripts', 'wp_enqueue_woocommerce_style' );
+
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
