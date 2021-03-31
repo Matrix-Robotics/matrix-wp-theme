@@ -2,6 +2,7 @@ web:
  image: wordpress
  volumes:
   - ./themes:/var/www/html/wp-content/themes/
+  - ./plugins:/var/www/html/wp-content/plugins/
  links:
   - mariadb:mysql
  environment:
