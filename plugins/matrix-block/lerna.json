@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "test",
+    "01-banner"
+  ],
+  "version": "independent"
+}
