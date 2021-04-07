@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Plugin Name:     Matrix Block
  * Description:     Gutenberg blocks for Matrix theme
@@ -20,33 +19,33 @@ defined( 'ABSPATH' ) || exit;
  *
  * Passes translations to JavaScript.
  */
-function banner_register_block() {
+function button_register_block() {
 
 	// automatically load dependencies and version
 	$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
 
 	wp_register_script(
-		'banner-block-editor-script',
+		'button-editor-script',
 		plugins_url( 'build/index.js', __FILE__ ),
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
 
 	wp_register_style(
-		'banner-block-style',
+		'button-style',
 		plugins_url( 'style.css', __FILE__ ),
 		array( ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
 	);
 
 	register_block_type( 
-		'matrix/banner-block',
+		'matrix/button-block',
 		array(
-			'editor_script' => 'banner-block-editor-script',
-			'style' 		=> 'banner-block-style',
+			'editor_script' => 'button-editor-script',
+			'style' 		=> 'button-style',
 		)
 	);
 
 }
 
-add_action( 'init', 'banner_register_block' );
+add_action( 'init', 'button_register_block' );

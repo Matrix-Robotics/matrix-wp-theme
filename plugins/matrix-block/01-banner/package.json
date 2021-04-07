@@ -2,7 +2,7 @@
 	"name": "banner",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Example: Recipe Card (ESNext).",
+	"description": "Banner for Matrix homepage and regular pages",
 	"author": "Kevin Cheng",
 	"license": "GPL-2.0-or-later",
 	"keywords": [

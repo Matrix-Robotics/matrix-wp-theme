@@ -1,7 +1,7 @@
 {
   "packages": [
-    "test",
-    "01-banner"
+    "01-banner",
+    "11-button"
   ],
   "version": "independent"
 }

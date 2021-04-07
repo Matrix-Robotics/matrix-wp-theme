@@ -1,12 +1,24 @@
 import { __ } from '@wordpress/i18n';
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType, registerBlockStyle } from '@wordpress/blocks';
 import { RichText, MediaUpload } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
 
 registerBlockType( 'matrix/banner-block', {
-	title: __( 'Banner for Matrix site', 'matrix' ),
-	icon: 'index-card',
+	
+	title: __( 'Banner', 'matrix' ),
+	icon: 'align-wide',
 	category: 'matrix-block',
+	styles: [
+		{
+			name: 'regular-banner',
+			label: __( 'Regular' ),
+			isDefault: true
+		},
+		{
+			name: 'homepage-banner',
+			label: __( 'Homepage' )
+		},
+	],
 	attributes: {
 		title: {
 			type: 'array',
