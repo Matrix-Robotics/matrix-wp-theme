@@ -1784,6 +1784,14 @@ body.post-type-pms-subscription #delete-action {
     font-size: 110%;
 }
 
+.pms-ipn-url {
+    margin-left: 160px;
+    padding: 20px;
+    background: white;
+    font-size: 110%;
+    font-weight: bold;
+}
+
 #pms-member-details label {
     font-weight: bold;
     margin-right: 12px;

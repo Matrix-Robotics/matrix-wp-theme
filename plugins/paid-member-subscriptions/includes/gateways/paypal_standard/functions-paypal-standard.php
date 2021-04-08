@@ -34,9 +34,20 @@ function pms_add_settings_content_paypal_standard( $options ) {
         <?php do_action( 'pms_settings_page_payment_gateway_paypal_extra_fields', $options ); ?>
 
         <!-- IPN Message -->
-        <p class="pms-ipn-notice">
+        <p class="pms-ipn-notice" style="margin-bottom:16px;">
             <?php printf( __( 'In order for <strong>PayPal payments to work correctly</strong>, you need to setup the IPN Url in your PayPal account. %sMore info%s', 'paid-member-subscriptions' ), '<a href="https://www.cozmoslabs.com/docs/paid-member-subscriptions/member-payments/#IPN_for_PayPal_gateways">', '</a>' ); ?>
         </p>
+        <p class="pms-ipn-notice">
+            <?php printf( __( 'Use the following URL for the IPN:', 'paid-member-subscriptions' ), '<a href="https://www.cozmoslabs.com/docs/paid-member-subscriptions/member-payments/#IPN_for_PayPal_gateways">', '</a>' ); ?>
+        </p>
+
+        <div class="pms-ipn-url">
+            <?php if( in_array( 'paypal_standard', $options['active_pay_gates'] ) ) : ?>
+                <?php echo add_query_arg( 'pay_gate_listener', 'paypal_ipn', home_url() ); ?>
+            <?php elseif( in_array( 'paypal_express', $options['active_pay_gates'] ) ) : ?>
+                <?php echo add_query_arg( 'pay_gate_listener', 'paypal_epipn', home_url() ); ?>
+            <?php endif; ?>
+        </div>
 
     </div>
 

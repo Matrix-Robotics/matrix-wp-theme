@@ -1584,7 +1584,7 @@
 <?php __("Filter", "paid-member-subscriptions"); ?>
 <?php __("Payment #%s", "paid-member-subscriptions"); ?>
 <?php __("Add New Payment", "paid-member-subscriptions"); ?>
-<?php __("Select the username you wish to assign this payment to. You can create a new user <a href=\"%s\">here</a>.", "paid-member-subscriptions"); ?>
+<?php __("Enter the username you wish to associate a payment with. You can create a new user <a href=\"%s\">here</a>.", "paid-member-subscriptions"); ?>
 <?php __("The Transaction ID will be provided by the payment gateway when the payment is registered within their system.", "paid-member-subscriptions"); ?>
 <?php __("Gateway", "paid-member-subscriptions"); ?>
 <?php __("Save Payment", "paid-member-subscriptions"); ?>
@@ -1716,6 +1716,7 @@
 <?php __("Test PayPal E-mail Address", "paid-member-subscriptions"); ?>
 <?php __("PayPal E-mail address to use for test transactions", "paid-member-subscriptions"); ?>
 <?php __("In order for <strong>PayPal payments to work correctly</strong>, you need to setup the IPN Url in your PayPal account. %sMore info%s", "paid-member-subscriptions"); ?>
+<?php __("Use the following URL for the IPN:", "paid-member-subscriptions"); ?>
 <?php __('Your <strong>PayPal Email Address</strong> is missing. In order to make payments you will need to add the Email Address of your PayPal account %1$s here %2$s.', 'paid-member-subscriptions' ); ?>
 <?php __("User sent to <strong>PayPal Checkout</strong> to continue the payment process.", "paid-member-subscriptions"); ?>
 <?php __("Waiting to receive Instant Payment Notification (IPN) from <strong>PayPal</strong>.", "paid-member-subscriptions"); ?>

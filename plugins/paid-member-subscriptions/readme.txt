@@ -4,7 +4,7 @@ Donate link: https://www.cozmoslabs.com/wordpress-paid-member-subscriptions/
 Tags: membership, paid membership, membership plan, membership level, member, members, subscription plans, user payments, paying users, paid users, restrict content, restrict access, content protection, content restriction, recurring payments, woocommerce
 Requires at least: 3.1
 Tested up to: 5.7
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -193,6 +193,14 @@ For more information please check out [Paid Member Subscriptions documentation](
 
 
 == Changelog ==
+= 2.3.3 =
+* Fix: A notice that started appearing with WordPress 5.7
+* Fix: An issue with a link from our Setup Wizard appearing as an empty link under the Dashboard menu
+* Feature: Improved Add New Payment page behaviour when the website has a lot of users
+* Misc: When exporting members that are part of a group subscriptions, every member will have an entry with his group name
+* Misc: Show current website IPN Url on the back-end payments page where credentials are added
+* Misc: Updated provided .po/.mo files with new strings from the plugin
+
 = 2.3.2 =
 * Misc: Don't show empty expiration date in back-end for recurring plugin managed subscriptions.
 * Misc: Added a button on the Settings -> Misc page that will re-register the Cron jobs from the plugin.

@@ -3,7 +3,7 @@
  * Plugin Name: Paid Member Subscriptions
  * Plugin URI: http://www.cozmoslabs.com/
  * Description: Accept payments, create subscription plans and restrict content on your membership website.
- * Version: 2.3.2
+ * Version: 2.3.3
  * Author: Cozmoslabs
  * Author URI: http://www.cozmoslabs.com/
  * Text Domain: paid-member-subscriptions
@@ -36,7 +36,7 @@ Class Paid_Member_Subscriptions {
 
     public function __construct() {
 
-        define( 'PMS_VERSION', '2.3.2' );
+        define( 'PMS_VERSION', '2.3.3' );
         define( 'PMS_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
         define( 'PMS_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ) );
         define( 'PMS_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
@@ -734,11 +734,11 @@ Class Paid_Member_Subscriptions {
         global $wpdb;
 
         // If pms_member_subscriptions already exists, but does not have the 'id' column, add it before the other columns
-        if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}{$this->prefix}member_subscriptions';" ) ) {
-            if ( $wpdb->get_var( "SHOW COLUMNS FROM `{$wpdb->prefix}{$this->prefix}member_subscriptions` LIKE 'id';" ) == null ) {
-                $wpdb->query( "ALTER TABLE {$wpdb->prefix}{$this->prefix}member_subscriptions ADD id bigint(20) NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST;" );
-            }
-        }
+        // if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}{$this->prefix}member_subscriptions';" ) ) {
+        //     if ( $wpdb->get_var( "SHOW COLUMNS FROM `{$wpdb->prefix}{$this->prefix}member_subscriptions` LIKE 'id';" ) == null ) {
+        //         $wpdb->query( "ALTER TABLE {$wpdb->prefix}{$this->prefix}member_subscriptions ADD id bigint(20) NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST;" );
+        //     }
+        // }
 
         // Add / Update the tables as needed
         $charset_collate = $wpdb->get_charset_collate();
@@ -948,7 +948,7 @@ Class Paid_Member_Subscriptions {
                 wp_enqueue_script( 'pms-chosen', PMS_PLUGIN_DIR_URL . 'assets/libs/chosen/chosen.jquery.min.js', array( 'jquery' ), PMS_VERSION );
                 wp_enqueue_style( 'pms-chosen', PMS_PLUGIN_DIR_URL . 'assets/libs/chosen/chosen.css', array(), PMS_VERSION );
 
-                wp_localize_script( 'pms-front-end', 'PMS_ChosenStrings', json_encode( array(
+                wp_add_inline_script( 'pms-front-end', 'PMS_ChosenStrings', json_encode( array(
                     'search_contains'  => true,
                     'placeholder_text' => __( 'Select an option', 'paid-member-subscriptions' ),
                     'no_results_text'  => __( 'No results match', 'paid-member-subscriptions' )

@@ -154,13 +154,15 @@ class IS_Settings_Fields
         }
         
         $tab = 'settings';
-        switch ( $_GET['tab'] ) {
-            case 'menu-search':
-                $tab = 'menu-search';
-                break;
-            case 'analytics':
-                $tab = 'analytics';
-                break;
+        if ( isset( $_GET['tab'] ) ) {
+            switch ( $_GET['tab'] ) {
+                case 'menu-search':
+                    $tab = 'menu-search';
+                    break;
+                case 'analytics':
+                    $tab = 'analytics';
+                    break;
+            }
         }
         
         if ( 'settings' === $tab ) {
