@@ -44,7 +44,7 @@ function matrix_block_categories( $categories ) {
             array(
                 array(
                     'slug' => 'matrix-block',
-                    'title' => __( 'Matrix Block', 'matrix-block' )
+                    'title' => __( 'Matrix Block', 'matrix-block' ),
                 ),
             ),
             $categories
