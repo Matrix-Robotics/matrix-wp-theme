@@ -1,7 +1,8 @@
 {
   "packages": [
     "01-banner",
-    "11-button"
+    "11-button",
+    "frontend"
   ],
   "version": "independent"
 }

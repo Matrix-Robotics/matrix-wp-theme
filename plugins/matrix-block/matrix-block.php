@@ -12,7 +12,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-include 'test/index.php';
+
+include 'frontend/index.php';
 
 include '01-banner/index.php';
 include '02-call-to-action/index.php';
@@ -31,26 +32,3 @@ include '12-social-icon/index.php';
 include '13-store-item-banner/index.php';
 include '14-store-item-nav/index.php';
 include '15-store-category/index.php';
-
-
-// Register new Matrix block category in Gutenberg editor
-function matrix_block_categories( $categories ) {
-    // Plugin’s block category title and slug.
-    $block_category = array( 'title' => esc_html__( 'Matrix Block', 'text-domain' ), 'slug' => 'matrix-block' );
-    $category_slugs = wp_list_pluck( $categories, 'slug' );
- 
-    if ( ! in_array( $block_category['slug'], $category_slugs, true ) ) {
-        $categories = array_merge(
-            array(
-                array(
-                    'slug' => 'matrix-block',
-                    'title' => __( 'Matrix Block', 'matrix-block' ),
-                ),
-            ),
-            $categories
-        );
-    }
- 
-    return $categories;
-}
-add_filter( 'block_categories', 'matrix_block_categories' );
