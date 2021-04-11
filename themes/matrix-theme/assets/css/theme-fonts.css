@@ -10,21 +10,21 @@
 	font-family: "Montserrat-500";
 	font-weight: 500;
 	font-style: normal;
-	src: url(../fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
+	src: url(../fonts/Montserrat/Montserrat-Medium.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Montserrat-600";
 	font-weight: 600;
 	font-style: normal;
-	src: url(../fonts/montserrat/Montserrat-SemiBold.ttf) format("truetype");
+	src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Montserrat-700";
 	font-weight: 700;
 	font-style: normal;
-	src: url(../fonts/montserrat/Montserrat-Bold.ttf) format("truetype");
+	src: url(../fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");
 }
 
 /* IBM Plex Sans --- */

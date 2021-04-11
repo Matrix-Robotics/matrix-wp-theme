@@ -35,6 +35,7 @@ function matrix_block_categories( $categories ) {
  
     return $categories;
 }
+
 add_filter( 'block_categories', 'matrix_block_categories' );
 
 
@@ -55,7 +56,7 @@ function frontend_register_script() {
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
-
+    
     register_block_type( 
 		'matrix/frontend',
 		array(

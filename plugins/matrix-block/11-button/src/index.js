@@ -1,14 +1,43 @@
 import { __ } from '@wordpress/i18n';
-import { registerBlockVariation } from '@wordpress/blocks';
+import { registerBlockVariation, registerBlockStyle, unregisterBlockStyle } from '@wordpress/blocks';
+import domReady from '@wordpress/dom-ready';
 
-
-registerBlockVariation( 'core/buttons', [{
-	name: 'matrix-btn',
-	title: __( 'Button', 'matrix' ),
+registerBlockVariation( 'core/buttons', [
+	{
+	name: 'matrix-btns',
+	title: __( 'Buttons', 'matrix' ),
 	icon: 'button',
 	category: 'matrix-block',
 	description: __( 'Customized button for Matrix site' ),
 	attributes: {  
-		className: 'is-matrix-btn' 
+		className: 'is-matrix-btns' 
 		},
-}] );
+	}] 
+);
+
+domReady( () => {
+	unregisterBlockStyle( 'core/button', 'fill' );
+	unregisterBlockStyle( 'core/button', 'outline' );
+
+	registerBlockStyle( 'core/button', [
+		{
+		name: 'action-btn',
+		label: 'Action',
+		isDefault: true
+		},
+		{
+		name: 'option-btn',
+		label: 'Option'
+		},
+		{
+		name: 'option-outline-btn',
+		label: 'Option (outline)'
+		},
+		{
+		name: 'danger-btn',
+		label: 'Danger'
+		}]
+	);
+	
+} );
+
