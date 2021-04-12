@@ -672,6 +672,24 @@ header {
 	background-color: #0079B0;
 }
 
+.is-style-action-btn {
+	border: none;
+	border-radius: 4px;
+	font-family: "Montserrat-600";
+	font-size: var(--font-size-l);
+	color: #ffffff;
+	background-color: #00A1E9;
+}
+
+.is-style-action-btn:hover {
+	background-color: #09BCFA;
+}
+
+.is-style-action-btn:active {
+	background-color: #0079B0;
+}
+
+
 
 
 /*--------------------------------------------------------------
@@ -1060,6 +1078,109 @@ a.to-the-top>* {
 	display: none!important;
 }
 
+/* Woocommerce ---------------------------- */
+
+.woocommerce-breadcrumb {
+	height: 38px;
+	padding: 0 208px;
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-m);
+	background-color: #1f1f1f;
+}
+
+.woocommerce-product-gallery__image {
+	text-align: center;
+    display: block;
+}
+
+.product.type-product {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+.product.type-product > span {
+	display: none;
+}
+
+.product.type-product .summary {
+	flex-basis: 33.33%;
+}
+
+.product.type-product .woocommerce-product-gallery {
+	flex-basis: 66.67%;
+}
+
+.product.type-product .woocommerce-tabs {
+	flex-basis: 100%;
+}
+
+.summary {
+	padding-top: 112px;
+}
+
+.summary > * {
+	margin: 0;
+}
+
+.summary .product_title {
+	margin: 15px 0;
+	font-family: "Montserrat-600", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-xxl);
+}
+
+.summary .price {
+	margin-bottom: 15px;
+	font-family: "Montserrat-500", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-xl);
+}
+
+.product_meta {
+	margin-bottom: 15px;
+	font-family: "IBM Plex Mono-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-storeCode);
+}
+
+.posted_in {
+	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-l);
+}
+
+.cart {
+	display: flex;
+	padding-right: 15px;
+}
+
+.cart .quantity {
+	flex-basis: 62.5%;
+	margin-right: 10px;
+	border: 0 !important;
+}
+
+.cart button {
+	width: 120px;
+}
+
+.cart .quantity input{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	height: 48px;
+	box-shadow: none;
+	background: #efefef;
+	border: 0 !important;
+	border-bottom: 1px solid #9a9a9a !important;
+}
+
+.woocommerce-tabs {
+	background-color: #eeeeee;
+}
+
+
 /*--------------------------------------------------------------
 # - Media Queries
 --------------------------------------------------------------*/
@@ -1076,6 +1197,12 @@ a.to-the-top>* {
 	}
 	.wp-block-post-content {
 		padding: 0 208px;
+	}
+	.woocommerce-product-gallery {
+		padding-right: 208px;
+	}
+	.summary {
+		padding-left: 208px;
 	}
 	.nav-dd, .i18n-dd {
 		display: none;

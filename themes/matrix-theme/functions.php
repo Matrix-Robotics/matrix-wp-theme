@@ -43,6 +43,9 @@ function matrix_theme_scripts() {
 
 	// Register and enqueue nav.js.
 	wp_enqueue_script( 'matrix-navigation-js', get_template_directory_uri() . '/assets/js/nav.js' , array( 'jquery' ), '1.0', true );
+
+	// Register and enqueue woocommerce.js.
+	wp_enqueue_script( 'matrix-woo-js', get_template_directory_uri() . '/assets/js/woo.js' , array( 'jquery' ), '1.0', true );
 }
 
 /**
