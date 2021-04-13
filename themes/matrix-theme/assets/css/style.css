@@ -581,6 +581,27 @@ header {
 	display: none;
 }
 
+.wc-block-featured-product__wrapper {
+	padding: 15px 30px;
+	height: 500px;
+}
+
+.wc-block-featured-product__link {
+	padding-top: 300px;
+}
+
+
+.is-style-front-content,
+.wp-block-spacer {
+	padding: 60px 120px;
+	background-color: #eeeeee;
+}
+
+.is-style-front-content h2{
+	margin: 0;
+	margin-bottom: 30px;
+}
+
 /* 01-Banner -------------------------------- */
 
 .front-page .wp-block-template-part {
@@ -681,6 +702,19 @@ header {
 .is-style-action-btn:active {
 	background-color: #0079B0;
 }
+
+
+/* 16-Columns -------------------------------- */
+
+.wp-block-matrix-columns-block {
+	
+	background-color: #eeeeee;
+}
+
+.wp-block-matrix-columns-block .wp-block-columns {
+	margin: 0;
+}
+
 
 
 
@@ -1168,7 +1202,6 @@ a.to-the-top>* {
 	line-height: 40px;
 }
 
-
 .cart {
 	display: flex;
 	padding-right: 15px;
@@ -1204,6 +1237,10 @@ a.to-the-top>* {
 	margin: 40px 0;
 }
 
+.wc-block-grid__product {
+	list-style-type: none;
+}
+
 
 
 
@@ -1221,11 +1258,14 @@ a.to-the-top>* {
 	.front-page .wp-block-template-part>*:first-child {
 		padding: 0 0 0 120px;
 	}
-	.wp-block-post-content,
+	.wp-block-matrix-banner-block,
 	.woocommerce-breadcrumb,
 	.woocommerce-tabs,
 	.related.products {
 		padding: 0 320px;
+	}
+	.wp-block-matrix-columns-block {
+		padding: 60px 320px;
 	}
 	.summary {
 		padding-left: 320px;

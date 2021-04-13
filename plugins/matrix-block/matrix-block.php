@@ -32,3 +32,4 @@ include '12-social-icon/index.php';
 include '13-store-item-banner/index.php';
 include '14-store-item-nav/index.php';
 include '15-store-category/index.php';
+include '16-columns/index.php';

@@ -2,6 +2,7 @@
   "packages": [
     "01-banner",
     "11-button",
+    "16-columns",
     "frontend"
   ],
   "version": "independent"

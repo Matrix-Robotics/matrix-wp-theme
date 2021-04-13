@@ -10,7 +10,7 @@ import ProductName from '@woocommerce/base-components/product-name';
 import {
 	useStoreCartItemQuantity,
 	useStoreEvents,
-} from '@woocommerce/base-hooks';
+} from '@woocommerce/base-context/hooks';
 import {
 	ProductBackorderBadge,
 	ProductImage,
@@ -92,7 +92,7 @@ const CartLineItemRow = ( { lineItem = {} } ) => {
 			line_subtotal: '0',
 			line_subtotal_tax: '0',
 		},
-		extensions,
+		extensions = {},
 	} = lineItem;
 
 	const {
@@ -249,7 +249,7 @@ const CartLineItemRow = ( { lineItem = {} } ) => {
 						maximum={ quantityLimit }
 						onChange={ ( newQuantity ) => {
 							setItemQuantity( newQuantity );
-							dispatchStoreEvent( 'set-cart-item-quantity', {
+							dispatchStoreEvent( 'cart-set-item-quantity', {
 								product: lineItem,
 								quantity: newQuantity,
 							} );
@@ -260,7 +260,7 @@ const CartLineItemRow = ( { lineItem = {} } ) => {
 						className="wc-block-cart-item__remove-link"
 						onClick={ () => {
 							removeItem();
-							dispatchStoreEvent( 'remove-cart-item', {
+							dispatchStoreEvent( 'cart-remove-item', {
 								product: lineItem,
 								quantity,
 							} );
