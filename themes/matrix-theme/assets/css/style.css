@@ -1223,7 +1223,8 @@ a.to-the-top>* {
 	}
 	.wp-block-post-content,
 	.woocommerce-breadcrumb,
-	.woocommerce-tabs {
+	.woocommerce-tabs,
+	.related.products {
 		padding: 0 320px;
 	}
 	.summary {
@@ -1425,7 +1426,7 @@ a.to-the-top>* {
 	}
 	.nav-media-l,
 	.sitemap-media-l {
-		display: none!important;
+		display: none;
 	}
 	.nav-media-s,
 	.sitemap-media-s {
@@ -1467,7 +1468,7 @@ a.to-the-top>* {
 	}
 	.nav-media-l,
 	.sitemap-media-l {
-		display: none!important;
+		display: none;
 	}
 	.nav-media-s,
 	.sitemap-media-s {
