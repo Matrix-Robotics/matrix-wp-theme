@@ -22,7 +22,7 @@ const TEMPLATE = [
 ];
 
 registerBlockType( 'matrix/columns-block', {
-	title: __( 'Columns', 'matrix' ),
+	title: __( 'Columns (1:2)', 'matrix' ),
 	icon: 'columns',
 	category: 'matrix-block',
 	styles: [

@@ -18,7 +18,7 @@ if ( ! function_exists( 'matrix_theme_support' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'matrix-theme-styles/editor-style.css' );
+		add_editor_style( 'assets/css/editor-style.css' );
 
 		// Add support for custom units.
 		add_theme_support( 'custom-units' );

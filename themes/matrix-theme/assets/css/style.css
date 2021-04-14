@@ -1101,6 +1101,7 @@ a.to-the-top>* {
 	background-color: var(--header-menu-color);
 }
 
+.is-screen-reader-text,
 #search-btn[type=checkbox]:not(:checked) ~ .is-search-form > label > .is-screen-reader-text{
 	display: none!important;
 }
@@ -1250,7 +1251,7 @@ a.to-the-top>* {
 
 @media only screen and (min-width: 1240px) {
 	header.wp-block-template-part {
-		height: 77px;
+		height: 78px;        /* magic trick to fix 1px height gap between nav elements */
 		padding: 0 0 0 120px;
 		row-gap: 15px;
 		column-gap: 15px;
