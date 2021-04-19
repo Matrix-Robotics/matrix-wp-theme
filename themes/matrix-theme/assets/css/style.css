@@ -666,6 +666,14 @@ header {
 }
 
 
+/* 07-Product Fluid -------------------------------- */
+
+.wp-block-matrix-product-fluid {
+	
+}
+
+
+
 /* 11-Button -------------------------------- */
 
 .wp-block-button__link {
@@ -704,7 +712,7 @@ header {
 }
 
 
-/* 16-Columns -------------------------------- */
+/* 16-Columns (1:2) -------------------------------- */
 
 .wp-block-matrix-columns-block {
 	
@@ -714,6 +722,7 @@ header {
 .wp-block-matrix-columns-block .wp-block-columns {
 	margin: 0;
 }
+
 
 
 
@@ -1241,9 +1250,6 @@ a.to-the-top>* {
 .wc-block-grid__product {
 	list-style-type: none;
 }
-
-
-
 
 /*--------------------------------------------------------------
 # - Media Queries

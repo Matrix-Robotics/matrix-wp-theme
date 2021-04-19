@@ -1,6 +1,7 @@
 {
   "packages": [
     "01-banner",
+    "07-product-fluid",
     "11-button",
     "16-columns",
     "frontend"
