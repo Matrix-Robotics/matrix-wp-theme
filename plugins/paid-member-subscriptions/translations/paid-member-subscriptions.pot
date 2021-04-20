@@ -21,39 +21,39 @@ msgstr ""
 msgid "This content is restricted for your membership level."
 msgstr ""
 
-#: index.php:865, index.php:865, includes/functions-user.php:187, extend/wpbakery/class-wpbakery.php:23, extend/wpbakery/class-wpbakery.php:56, extend/wpbakery/class-wpbakery.php:75, extend/wpbakery/class-wpbakery.php:100, extend/beaver-builder/modules/pms-account/pms-account.php:18, extend/beaver-builder/modules/pms-login/pms-login.php:18, extend/beaver-builder/modules/pms-recover-password/pms-recover-password.php:18, extend/beaver-builder/modules/pms-register/pms-register.php:18
+#: index.php:872, index.php:872, includes/functions-user.php:187, extend/wpbakery/class-wpbakery.php:23, extend/wpbakery/class-wpbakery.php:56, extend/wpbakery/class-wpbakery.php:75, extend/wpbakery/class-wpbakery.php:100, extend/beaver-builder/modules/pms-account/pms-account.php:18, extend/beaver-builder/modules/pms-login/pms-login.php:18, extend/beaver-builder/modules/pms-recover-password/pms-recover-password.php:18, extend/beaver-builder/modules/pms-register/pms-register.php:18
 msgid "Paid Member Subscriptions"
 msgstr ""
 
-#: index.php:884, includes/admin/class-admin-uninstall.php:79, includes/admin/class-admin-uninstall.php:79, includes/admin/views/view-page-uninstall.php:44, includes/admin/views/view-page-uninstall.php:60
+#: index.php:891, includes/admin/class-admin-uninstall.php:79, includes/admin/class-admin-uninstall.php:79, includes/admin/views/view-page-uninstall.php:44, includes/admin/views/view-page-uninstall.php:60
 msgid "Uninstall"
 msgstr ""
 
-#: index.php:886, includes/admin/class-admin-settings.php:235, includes/admin/class-admin-settings.php:235, includes/admin/class-admin-setup-wizard.php:47, includes/admin/views/view-page-basic-info.php:79, includes/admin/views/view-page-basic-info.php:115, includes/admin/views/setup-wizard/view-tab-general.php:20, includes/admin/views/setup-wizard/view-tab-next.php:44
+#: index.php:893, includes/admin/class-admin-settings.php:235, includes/admin/class-admin-settings.php:235, includes/admin/class-admin-setup-wizard.php:47, includes/admin/views/view-page-basic-info.php:79, includes/admin/views/view-page-basic-info.php:115, includes/admin/views/setup-wizard/view-tab-general.php:20, includes/admin/views/setup-wizard/view-tab-next.php:44
 msgid "Settings"
 msgstr ""
 
-#: index.php:888
+#: index.php:895
 msgid "Docs"
 msgstr ""
 
-#: index.php:936
+#: index.php:943
 msgid "Type %s to confirm deleting your account and all data associated with it:"
 msgstr ""
 
-#: index.php:937
+#: index.php:944
 msgid "You did not type %s. Try again!"
 msgstr ""
 
-#: index.php:953
+#: index.php:960
 msgid "Select an option"
 msgstr ""
 
-#: index.php:954
+#: index.php:961
 msgid "No results match"
 msgstr ""
 
-#: index.php:973, index.php:973
+#: index.php:980, index.php:980
 msgid "Get Support"
 msgstr ""
 
@@ -633,96 +633,116 @@ msgstr ""
 msgid "No %s found in Trash"
 msgstr ""
 
-#: includes/class-emails.php:470
+#: includes/class-emails.php:543
 msgid "Register Email"
 msgstr ""
 
-#: includes/class-emails.php:471
+#: includes/class-emails.php:544
 msgid "Activate Subscription Email"
 msgstr ""
 
-#: includes/class-emails.php:472
+#: includes/class-emails.php:545
 msgid "Cancel and Abandon Subscription Email"
 msgstr ""
 
-#: includes/class-emails.php:473
+#: includes/class-emails.php:546
 msgid "Expired Subscription Email"
 msgstr ""
 
-#: includes/class-emails.php:474
+#: includes/class-emails.php:547
 msgid "Failed Payment Email"
 msgstr ""
 
-#: includes/class-emails.php:496
+#: includes/class-emails.php:548
+msgid "Renew Subscription Email"
+msgstr ""
+
+#: includes/class-emails.php:570
 msgid "You have a new account"
 msgstr ""
 
-#: includes/class-emails.php:497
+#: includes/class-emails.php:571
 msgid "Your Subscription is now active"
 msgstr ""
 
-#: includes/class-emails.php:498
+#: includes/class-emails.php:572
 msgid "Your Subscription has been canceled"
 msgstr ""
 
-#: includes/class-emails.php:499
+#: includes/class-emails.php:573
 msgid "Your Subscription has expired"
 msgstr ""
 
-#: includes/class-emails.php:500
+#: includes/class-emails.php:574
 msgid "Your latest payment has failed"
 msgstr ""
 
-#: includes/class-emails.php:509
+#: includes/class-emails.php:575
+msgid "Your Subscription was renewed"
+msgstr ""
+
+#: includes/class-emails.php:584
 msgid "A New User has registered to your website"
 msgstr ""
 
-#: includes/class-emails.php:510
+#: includes/class-emails.php:585
 msgid "A Member Subscription is now active"
 msgstr ""
 
-#: includes/class-emails.php:511
+#: includes/class-emails.php:586
 msgid "A Member Subscription has been canceled"
 msgstr ""
 
-#: includes/class-emails.php:512
+#: includes/class-emails.php:587
 msgid "A Member Subscription has expired"
 msgstr ""
 
-#: includes/class-emails.php:536
+#: includes/class-emails.php:588
+msgid "A Member Subscription was renewed"
+msgstr ""
+
+#: includes/class-emails.php:612
 msgid "Congratulations {{display_name}}! You have successfully created an account!"
 msgstr ""
 
-#: includes/class-emails.php:537
+#: includes/class-emails.php:613
 msgid "Congratulations {{display_name}}! The \"{{subscription_name}}\" plan has been successfully activated."
 msgstr ""
 
-#: includes/class-emails.php:538
+#: includes/class-emails.php:614
 msgid "Hello {{display_name}}, The \"{{subscription_name}}\" plan has been canceled."
 msgstr ""
 
-#: includes/class-emails.php:539
-msgid "Hello {{display_name}},The \"{{subscription_name}}\" plan has expired."
+#: includes/class-emails.php:615
+msgid "Hello {{display_name}}, The \"{{subscription_name}}\" plan has expired."
 msgstr ""
 
-#: includes/class-emails.php:540
+#: includes/class-emails.php:616
 msgid "Your latest payment for the \"{{subscription_name}}\" plan has failed. You can go to the <a href=\"{{account_page_url}}\">account page</a> and login in order to try again.<br><br>{{automatic_retry_message}}"
 msgstr ""
 
-#: includes/class-emails.php:549
+#: includes/class-emails.php:617
+msgid "Hello {{display_name}}, The \"{{subscription_name}}\" plan has been renewed."
+msgstr ""
+
+#: includes/class-emails.php:626
 msgid "{{display_name}} has just created an account!"
 msgstr ""
 
-#: includes/class-emails.php:550
+#: includes/class-emails.php:627
 msgid "The \"{{subscription_name}}\" plan has been successfully activated for user {{display_name}}."
 msgstr ""
 
-#: includes/class-emails.php:551
+#: includes/class-emails.php:628
 msgid "The \"{{subscription_name}}\" plan has been canceled for user {{display_name}}."
 msgstr ""
 
-#: includes/class-emails.php:552
+#: includes/class-emails.php:629
 msgid "The \"{{subscription_name}}\" plan has expired for user {{display_name}}."
+msgstr ""
+
+#: includes/class-emails.php:630
+msgid "The \"{{subscription_name}}\" plan was renewed for user {{display_name}}."
 msgstr ""
 
 #: includes/class-form-handler.php:50, includes/class-form-handler.php:57
@@ -915,6 +935,30 @@ msgstr ""
 
 #: includes/class-plugin-usage-tracker.php:349
 msgid "Weekly"
+msgstr ""
+
+#: includes/class-review.php:74
+msgid "Hello! Seems like you've been using Paid Member Subscriptions to receive payments. That's awesome!"
+msgstr ""
+
+#: includes/class-review.php:76
+msgid "If you can spare a few moments to rate it on WordPress.org, it would help us a lot (and boost my motivation)."
+msgstr ""
+
+#: includes/class-review.php:79
+msgid "~ Adrian, developer of Paid Member Subscriptions"
+msgstr ""
+
+#: includes/class-review.php:85
+msgid "Ok, I will gladly help!"
+msgstr ""
+
+#: includes/class-review.php:89
+msgid "No, thanks."
+msgstr ""
+
+#: includes/class-review.php:95, includes/functions-plugin-notifications.php:106
+msgid "Dismiss this notice."
 msgstr ""
 
 #: includes/class-shortcodes.php:78
@@ -2933,10 +2977,6 @@ msgstr ""
 msgid "More Details"
 msgstr ""
 
-#: includes/functions-plugin-notifications.php:106
-msgid "Dismiss this notice."
-msgstr ""
-
 #: includes/functions-subscription-plan.php:426, includes/admin/class-admin-subscription-plans.php:390, includes/admin/class-admin-subscription-plans.php:435
 msgid "%s Day"
 msgid_plural "%s Days"
@@ -3071,7 +3111,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: ../pms-add-on-content-dripping/includes/class-meta-box-content-dripping-rules.php:75, ../pms-add-on-content-dripping/includes/class-meta-box-content-dripping-rules.php:271, ../pms-add-on-group-memberships/includes/class-emails.php:114, ../pms-add-on-stripe/includes/class-emails.php:110, includes/admin/views/view-page-settings-emails.php:79, includes/admin/views/view-page-settings-emails.php:104, includes/admin/views/view-page-settings-emails.php:127, includes/admin/views/view-page-settings-emails.php:179, includes/admin/views/view-page-settings-emails.php:204
+#: ../pms-add-on-content-dripping/includes/class-meta-box-content-dripping-rules.php:75, ../pms-add-on-content-dripping/includes/class-meta-box-content-dripping-rules.php:271, ../pms-add-on-group-memberships/includes/class-emails.php:114, ../pms-add-on-stripe/includes/class-emails.php:110, includes/admin/views/view-page-settings-emails.php:79, includes/admin/views/view-page-settings-emails.php:104, includes/admin/views/view-page-settings-emails.php:127, includes/admin/views/view-page-settings-emails.php:148, includes/admin/views/view-page-settings-emails.php:200, includes/admin/views/view-page-settings-emails.php:225, includes/admin/views/view-page-settings-emails.php:248
 msgid "Content"
 msgstr ""
 
@@ -3303,11 +3343,11 @@ msgstr ""
 msgid "Group Membership Invite Email"
 msgstr ""
 
-#: ../pms-add-on-group-memberships/includes/class-emails.php:104, ../pms-add-on-stripe/includes/class-emails.php:100, includes/admin/views/view-page-settings-emails.php:69, includes/admin/views/view-page-settings-emails.php:94, includes/admin/views/view-page-settings-emails.php:117, includes/admin/views/view-page-settings-emails.php:169, includes/admin/views/view-page-settings-emails.php:194
+#: ../pms-add-on-group-memberships/includes/class-emails.php:104, ../pms-add-on-stripe/includes/class-emails.php:100, includes/admin/views/view-page-settings-emails.php:69, includes/admin/views/view-page-settings-emails.php:94, includes/admin/views/view-page-settings-emails.php:117, includes/admin/views/view-page-settings-emails.php:138, includes/admin/views/view-page-settings-emails.php:190, includes/admin/views/view-page-settings-emails.php:215, includes/admin/views/view-page-settings-emails.php:238
 msgid "Enable email"
 msgstr ""
 
-#: ../pms-add-on-group-memberships/includes/class-emails.php:109, ../pms-add-on-stripe/includes/class-emails.php:105, includes/admin/views/view-page-settings-emails.php:74, includes/admin/views/view-page-settings-emails.php:99, includes/admin/views/view-page-settings-emails.php:122, includes/admin/views/view-page-settings-emails.php:174, includes/admin/views/view-page-settings-emails.php:199
+#: ../pms-add-on-group-memberships/includes/class-emails.php:109, ../pms-add-on-stripe/includes/class-emails.php:105, includes/admin/views/view-page-settings-emails.php:74, includes/admin/views/view-page-settings-emails.php:99, includes/admin/views/view-page-settings-emails.php:122, includes/admin/views/view-page-settings-emails.php:143, includes/admin/views/view-page-settings-emails.php:195, includes/admin/views/view-page-settings-emails.php:220, includes/admin/views/view-page-settings-emails.php:243
 msgid "Subject"
 msgstr ""
 
@@ -4899,7 +4939,7 @@ msgstr ""
 msgid "Select who will receive the emails sent by this reminder."
 msgstr ""
 
-#: ../pms-add-on-email-reminders/includes/views/view-meta-box-email-reminders.php:23, includes/admin/views/view-page-settings-emails.php:30, includes/admin/views/view-page-settings-emails.php:152
+#: ../pms-add-on-email-reminders/includes/views/view-meta-box-email-reminders.php:23, includes/admin/views/view-page-settings-emails.php:30, includes/admin/views/view-page-settings-emails.php:173
 msgid "Administrator Emails"
 msgstr ""
 
@@ -6440,19 +6480,19 @@ msgstr ""
 msgid "From Email"
 msgstr ""
 
-#: includes/admin/views/view-page-settings-emails.php:144
+#: includes/admin/views/view-page-settings-emails.php:165
 msgid "Enable Administrator Emails"
 msgstr ""
 
-#: includes/admin/views/view-page-settings-emails.php:147
+#: includes/admin/views/view-page-settings-emails.php:168
 msgid "Send Administrator Emails"
 msgstr ""
 
-#: includes/admin/views/view-page-settings-emails.php:148
+#: includes/admin/views/view-page-settings-emails.php:169
 msgid "By checking this option administrator emails are enabled."
 msgstr ""
 
-#: includes/admin/views/view-page-settings-emails.php:154
+#: includes/admin/views/view-page-settings-emails.php:175
 msgid "Add a list of email addresses, separated by comma, that you wish to receive emails for member subscription status changes."
 msgstr ""
 

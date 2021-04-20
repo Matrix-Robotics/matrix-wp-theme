@@ -165,24 +165,29 @@
 <?php __("Cancel and Abandon Subscription Email", "paid-member-subscriptions"); ?>
 <?php __("Expired Subscription Email", "paid-member-subscriptions"); ?>
 <?php __("Failed Payment Email", "paid-member-subscriptions"); ?>
+<?php __("Renew Subscription Email", "paid-member-subscriptions"); ?>
 <?php __("You have a new account", "paid-member-subscriptions"); ?>
 <?php __("Your Subscription is now active", "paid-member-subscriptions"); ?>
 <?php __("Your Subscription has been canceled", "paid-member-subscriptions"); ?>
 <?php __("Your Subscription has expired", "paid-member-subscriptions"); ?>
 <?php __("Your latest payment has failed", "paid-member-subscriptions"); ?>
+<?php __("Your Subscription was renewed", "paid-member-subscriptions"); ?>
 <?php __("A New User has registered to your website", "paid-member-subscriptions"); ?>
 <?php __("A Member Subscription is now active", "paid-member-subscriptions"); ?>
 <?php __("A Member Subscription has been canceled", "paid-member-subscriptions"); ?>
 <?php __("A Member Subscription has expired", "paid-member-subscriptions"); ?>
+<?php __("A Member Subscription was renewed", "paid-member-subscriptions"); ?>
 <?php __("Congratulations {{display_name}}! You have successfully created an account!", "paid-member-subscriptions"); ?>
 <?php __("Congratulations {{display_name}}! The \"{{subscription_name}}\" plan has been successfully activated.", "paid-member-subscriptions"); ?>
 <?php __("Hello {{display_name}}, The \"{{subscription_name}}\" plan has been canceled.", "paid-member-subscriptions"); ?>
-<?php __("Hello {{display_name}},The \"{{subscription_name}}\" plan has expired.", "paid-member-subscriptions"); ?>
+<?php __("Hello {{display_name}}, The \"{{subscription_name}}\" plan has expired.", "paid-member-subscriptions"); ?>
 <?php __("Your latest payment for the \"{{subscription_name}}\" plan has failed. You can go to the <a href=\"{{account_page_url}}\">account page</a> and login in order to try again.<br><br>{{automatic_retry_message}}", "paid-member-subscriptions"); ?>
+<?php __("Hello {{display_name}}, The \"{{subscription_name}}\" plan has been renewed.", "paid-member-subscriptions"); ?>
 <?php __("{{display_name}} has just created an account!", "paid-member-subscriptions"); ?>
 <?php __("The \"{{subscription_name}}\" plan has been successfully activated for user {{display_name}}.", "paid-member-subscriptions"); ?>
 <?php __("The \"{{subscription_name}}\" plan has been canceled for user {{display_name}}.", "paid-member-subscriptions"); ?>
 <?php __("The \"{{subscription_name}}\" plan has expired for user {{display_name}}.", "paid-member-subscriptions"); ?>
+<?php __("The \"{{subscription_name}}\" plan was renewed for user {{display_name}}.", "paid-member-subscriptions"); ?>
 <?php __("Please enter a username.", "paid-member-subscriptions"); ?>
 <?php __("This username is already taken. Please choose another one.", "paid-member-subscriptions"); ?>
 <?php __("This username is already taken. Please choose another one or login %shere%s.", "paid-member-subscriptions"); ?>
@@ -231,6 +236,12 @@
 <?php __("Allow Paid Member Subscriptions to anonymously track the plugin's usage. Data provided by this tracking helps us improve the plugin.<br>", "paid-member-subscriptions"); ?>
 <?php __("No sensitive data is shared. %sLearn More%s", "paid-member-subscriptions"); ?>
 <?php __("Weekly", "paid-member-subscriptions"); ?>
+<?php __("Hello! Seems like you've been using Paid Member Subscriptions to receive payments. That's awesome!", "paid-member-subscriptions"); ?>
+<?php __("If you can spare a few moments to rate it on WordPress.org, it would help us a lot (and boost my motivation).", "paid-member-subscriptions"); ?>
+<?php __("~ Adrian, developer of Paid Member Subscriptions", "paid-member-subscriptions"); ?>
+<?php __("Ok, I will gladly help!", "paid-member-subscriptions"); ?>
+<?php __("No, thanks.", "paid-member-subscriptions"); ?>
+<?php __("Dismiss this notice.", "paid-member-subscriptions"); ?>
 <?php __("Congratulations, your account has been successfully created.", "paid-member-subscriptions"); ?>
 <?php __("Only an administrator can add new users.", "paid-member-subscriptions"); ?>
 <?php __("Only registered users can see this information.", "paid-member-subscriptions"); ?>
@@ -735,7 +746,6 @@
 <?php __("If you have issues with the styling of the submit button on <strong>Paid Member Subscriptions</strong> forms, <a href=\"%s\" target=\"_blank\">click here</a> for more info.", "paid-member-subscriptions"); ?>
 <?php __("Check out the new <strong>Tax & EU VAT</strong> add-on which helps you collect tax or vat from your users depending on their location, with full control over tax rates and who to charge.", "paid-member-subscriptions"); ?>
 <?php __("More Details", "paid-member-subscriptions"); ?>
-<?php __("Dismiss this notice.", "paid-member-subscriptions"); ?>
 <?php __("%s Day", "paid-member-subscriptions"); ?>
 <?php __("%s Days", "paid-member-subscriptions"); ?>
 <?php __("%s Week", "paid-member-subscriptions"); ?>

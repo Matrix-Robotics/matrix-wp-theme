@@ -26,7 +26,6 @@ registerBlockType( 'matrix/product-fluid', {
 			<div>
 				<InnerBlocks
 					template={ TEMPLATE }
-					templateLock="all"
             	/>
 			</div>
 		);
@@ -36,7 +35,6 @@ registerBlockType( 'matrix/product-fluid', {
 			<div>
 				<InnerBlocks.Content
 					template={ TEMPLATE }
-					templateLock="all"
             	/>
 			</div>
 		);

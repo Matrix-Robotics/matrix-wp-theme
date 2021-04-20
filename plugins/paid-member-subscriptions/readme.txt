@@ -4,7 +4,7 @@ Donate link: https://www.cozmoslabs.com/wordpress-paid-member-subscriptions/
 Tags: membership, paid membership, membership plan, membership level, member, members, subscription plans, user payments, paying users, paid users, restrict content, restrict access, content protection, content restriction, recurring payments, woocommerce
 Requires at least: 3.1
 Tested up to: 5.7
-Stable tag: 2.3.3
+Stable tag: 2.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -193,6 +193,11 @@ For more information please check out [Paid Member Subscriptions documentation](
 
 
 == Changelog ==
+= 2.3.4 =
+* Feature: Added an email for subscription renewals. Disabled by default
+* Fix: Make the GDPR text that the user enters translateable
+* Misc: Change method of determining website user count when choosing to show a select or input on the Add New Member and Add New Payment pages
+
 = 2.3.3 =
 * Fix: A notice that started appearing with WordPress 5.7
 * Fix: An issue with a link from our Setup Wizard appearing as an empty link under the Dashboard menu

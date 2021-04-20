@@ -9,7 +9,7 @@ const TEMPLATE = [
 		[
 			[
 				'core/column',
-				{ width:33.33} ,
+				{ width:33.33 } ,
 				[]
 			],
 			[
@@ -38,7 +38,6 @@ registerBlockType( 'matrix/columns-block', {
 			<div>
 				<InnerBlocks
 					template={ TEMPLATE }
-					templateLock="all"
             	/>
 			</div>
 		);
@@ -48,7 +47,6 @@ registerBlockType( 'matrix/columns-block', {
 			<div>
 				<InnerBlocks.Content
 					template={ TEMPLATE }
-					templateLock="all"
             	/>
 			</div>
 		);

@@ -1247,3 +1247,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
           }
       }
+
+    /**
+     * Add a notice requesting a plugin review on wp.org
+     *
+     */
+    new PMS_Review_Request ();

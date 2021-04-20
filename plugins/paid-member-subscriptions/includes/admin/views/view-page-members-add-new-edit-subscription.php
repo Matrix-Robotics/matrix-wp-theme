@@ -125,7 +125,7 @@ if( ! empty( $_POST ) ) {
 									<?php if( $subpage == 'add_subscription' && $first_subscription ): ?>
 
 										<?php
-										$users = count_users();
+										$users = pms_count_users();
 
 										if( $users['total_users'] < apply_filters( 'pms_add_new_member_select_user_limit', '8000' ) ) : ?>
 								            <select id="pms-member-username" name="pms-member-username" class="widefat pms-chosen">
