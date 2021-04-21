@@ -5,10 +5,10 @@ import { InnerBlocks } from '@wordpress/block-editor';
 const TEMPLATE = [
     [ 'core/columns', {}, [
 		[ 'core/column', {}, [
-			[ 'core/heading', { placeholder: 'Explore your creativity' } ],
-			[ 'core/paragraph', { placeholder: 'Build, code, & learn with MATRIX ' } ],
+			[ 'core/heading', { placeholder: 'Title' } ],
+			[ 'core/paragraph', { placeholder: 'Add paragraph' } ],
 			[ 'core/buttons', {}, [
-				[ 'core/button', { placeholder: 'Learn more'} ]
+				[ 'core/button', { placeholder: 'Button'} ]
 			]],
 		] ],
 		[ 'core/column', {}, [
@@ -44,7 +44,6 @@ registerBlockType( 'matrix/banner-block', {
 			<div>
 				<InnerBlocks
 					template={ TEMPLATE }
-					templateLock="all"
             	/>
 			</div>
 		);
@@ -54,7 +53,6 @@ registerBlockType( 'matrix/banner-block', {
 			<div>
 				<InnerBlocks.Content
 					template={ TEMPLATE }
-					templateLock="all"
             	/>
 			</div>
 		);

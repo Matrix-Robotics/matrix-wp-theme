@@ -2,6 +2,7 @@
   "packages": [
     "01-banner",
     "07-product-fluid",
+    "08-text-box",
     "11-button",
     "16-columns",
     "frontend"
