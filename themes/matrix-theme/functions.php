@@ -135,6 +135,24 @@ function custom_breadcrumb( $crumbs, $object_class ){
     return $crumbs;
 }
 
+
+/**
+ * Add a custom product data tab
+ */
+
+function woo_new_product_tab( $tabs ) {
+	
+	$tabs['description']['title'] = __( 'Overview' );
+	$tabs['additional_information']['title'] = __( 'Specifications' );
+
+	unset( $tabs['download'] ); 		// Remove the download tab
+    unset( $tabs['reviews'] ); 			// Remove the reviews tab		
+
+	return $tabs;
+}
+
+
+
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
 add_action( 'wp_enqueue_scripts', 'get_html_block_template_parts', 1 );
 add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
@@ -147,3 +165,4 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_woocommerce_style' );
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_delimiter' );
 add_filter( 'woocommerce_get_breadcrumb', 'custom_breadcrumb', 10, 2 );
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
