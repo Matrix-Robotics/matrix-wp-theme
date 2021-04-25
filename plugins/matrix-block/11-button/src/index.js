@@ -21,21 +21,25 @@ domReady( () => {
 
 	registerBlockStyle( 'core/button', [
 		{
-		name: 'action-btn',
-		label: 'Action',
-		isDefault: true
+			name: 'action-btn',
+			label: 'Action',
+			isDefault: true
 		},
 		{
-		name: 'option-btn',
-		label: 'Option'
+			name: 'textbox-btn',
+			label: 'Text Box link',
 		},
 		{
-		name: 'option-outline-btn',
-		label: 'Option (outline)'
+			name: 'option-btn',
+			label: 'Option'
 		},
 		{
-		name: 'danger-btn',
-		label: 'Danger'
+			name: 'option-outline-btn',
+			label: 'Option (outline)'
+		},
+		{
+			name: 'danger-btn',
+			label: 'Danger'
 		}]
 	);
 	

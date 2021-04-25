@@ -680,11 +680,25 @@ header {
 	
 }
 
+/* 08-Text Box -------------------------------- */
+
+
+.wp-block-matrix-text-box-download,
+.wp-block-matrix-text-box-lesson,
+.wp-block-matrix-text-box-started,
+.wp-block-matrix-text-box-support {
+	background-color: #fff;
+	padding: 25px 0 !important;
+	text-align: center;
+	border: 1px solid #516A9F;
+}
+
 
 
 /* 11-Button -------------------------------- */
 
 .wp-block-button__link {
+	background-color: #00A1E9;
 	font-family: "Montserrat-600";
 	font-size: var(--font-size-l);
 	border-radius: 4px;
@@ -719,6 +733,29 @@ header {
 	background-color: #0079B0;
 }
 
+.is-style-textbox-btn > .wp-block-button__link {
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	line-height: 30px;
+	background-color: inherit;
+	color: #00A1E9;
+}
+
+.is-style-textbox-btn > .wp-block-button__link::after {
+	content: ' ';
+  	background-image: url("data:image/svg+xml,%3Csvg width='31' height='30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.5 15l-6.25-6.25L13 10l5 5-5 5 1.25 1.25 5-5L20.5 15z' fill='%2300A1E9'/%3E%3C/svg%3E")!important;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+
+.is-style-textbox-btn {
+	border: none;
+	letter-spacing: 0.1em;
+}
+
+
 
 /* 16-Columns (1:2) -------------------------------- */
 
@@ -727,12 +764,10 @@ header {
 	background-color: #eeeeee;
 }
 
+.wp-block-columns,
 .wp-block-matrix-columns-block .wp-block-columns {
 	margin: 0;
 }
-
-
-
 
 
 
@@ -958,6 +993,10 @@ a.to-the-top>* {
 
 .wp-block-columns {
 	display: flex;
+}
+
+.wp-block-columns ~ .wp-block-columns {
+	padding-top: 0;
 }
 
 .wp-site-blocks, .wp-block-template-part.alignfull {
@@ -3937,13 +3976,6 @@ figure.wp-block-table.is-style-stripes {
 /* Font Families ----------------------------- */
 
 /* Alignment Classes ------------------------- */
-
-.alignnone, .aligncenter, .alignleft, .alignright, .alignwide {
-	margin-top: 4rem;
-	margin-right: auto;
-	margin-bottom: 4rem;
-	margin-left: auto;
-}
 
 [class*="__inner-container"]>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
 	margin-left: auto;

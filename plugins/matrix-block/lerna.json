@@ -2,7 +2,10 @@
   "packages": [
     "01-banner",
     "07-product-fluid",
-    "08-text-box",
+    "08-text-box-download",
+    "08-text-box-lesson",
+    "08-text-box-started",
+    "08-text-box-support",
     "11-button",
     "16-columns",
     "frontend"

@@ -586,3 +586,64 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 .has-huge-font-size {
 	font-size: 64px;
 }
+
+
+
+
+.wp-block-button__link {
+	background-color: #00A1E9;
+	font-family: "Montserrat-600";
+	font-size: var(--font-size-l);
+	border-radius: 4px;
+}
+
+.is-style-action-btn > .wp-block-button__link{
+	background-color: #00A1E9;
+}
+
+.is-style-action-btn > .wp-block-button__link:hover {
+	background-color: #09BCFA;
+}
+
+.is-style-action-btn > .wp-block-button__link:active {
+	background-color: #0079B0;
+}
+
+.is-style-action-btn {
+	border: none;
+	border-radius: 4px;
+	font-family: "Montserrat-600";
+	font-size: var(--font-size-l);
+	color: #ffffff;
+	background-color: #00A1E9;
+}
+
+.is-style-action-btn:hover {
+	background-color: #09BCFA;
+}
+
+.is-style-action-btn:active {
+	background-color: #0079B0;
+}
+
+.is-style-textbox-btn > .wp-block-button__link {
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	line-height: 30px;
+	background-color: inherit;
+	color: #00A1E9;
+}
+
+.is-style-textbox-btn > .wp-block-button__link::after {
+	content: ' ';
+  	background-image: url("data:image/svg+xml,%3Csvg width='31' height='30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.5 15l-6.25-6.25L13 10l5 5-5 5 1.25 1.25 5-5L20.5 15z' fill='%2300A1E9'/%3E%3C/svg%3E")!important;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+
+.is-style-textbox-btn {
+	border: none;
+	letter-spacing: 0.1em;
+}
