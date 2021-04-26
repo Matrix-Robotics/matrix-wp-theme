@@ -677,6 +677,7 @@ header {
 /* 07-Product Fluid -------------------------------- */
 
 .wp-block-matrix-product-fluid {
+
 	
 }
 
@@ -688,12 +689,65 @@ header {
 .wp-block-matrix-text-box-started,
 .wp-block-matrix-text-box-support {
 	background-color: #fff;
-	padding: 25px 0 !important;
+	padding: 25px 20px !important;
 	text-align: center;
 	border: 1px solid #516A9F;
 }
 
+/* 09-Horizental Card -------------------------------- */
 
+
+/* TODO RWD */
+.wp-block-matrix-horizental-card {
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #516A9F;
+}
+
+.wp-block-matrix-horizental-card .wp-block-group {
+	display: flex;
+	flex-basis: 60%;
+	flex-direction: column;
+	flex-shrink: 1;
+	justify-content: space-between;
+	margin: 30px 25px 20px 0 !important;
+	height: 330px;
+}
+
+.wp-block-matrix-horizental-card figure {
+	flex-shrink: 1;
+	margin: 0;
+	top: 0;
+}
+
+.wp-block-matrix-horizental-card h2 {
+	margin: 10px 0 !important;
+	font-weight: 500;
+	font-size: var(--font-size-xl);
+}
+
+
+/* TODO RWD */
+.wp-block-matrix-horizental-card .wp-block-button {
+	margin-top: 5px!important;
+	margin-right: 4px!important;
+}
+
+.wp-block-matrix-horizental-card .wp-block-button__link {
+	margin: 0!important;
+	font-size: var(--font-size-m)!important;
+}
+
+.wp-block-matrix-horizental-card p {
+	margin: 20px 0!important;
+	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-l);
+}
+
+.wp-block-matrix-horizental-card .wp-block-button.is-style-textbox-btn {
+	align-self: flex-end;
+}
 
 /* 11-Button -------------------------------- */
 

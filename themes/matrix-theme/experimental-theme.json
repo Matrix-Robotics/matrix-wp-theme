@@ -28,5 +28,25 @@
 			"color": { },
 			"typography": { }
 		}
+	},
+	"core/button": {
+		"styles": {
+			"color": {
+                "palette": [
+                    {
+                        "slug": "secondary-blue",
+                        "color": "#00A1E9"
+                    },
+                    {
+                        "slug": "support-yellow",
+                        "color": "#EFBB00"
+                    },
+					{
+                        "slug": "gray-scale",
+                        "color": "#6D6D6D"
+                    }
+                ]
+            }
+		}
 	}
 }

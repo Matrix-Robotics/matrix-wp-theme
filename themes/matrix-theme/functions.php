@@ -153,6 +153,37 @@ function woo_new_product_tab( $tabs ) {
 
 
 
+
+add_theme_support( 'editor-color-palette', array(
+	array(
+		'name'  => __( 'secondary blue', 'matrix-color' ),
+		'slug'  => 'secondary-blue',
+		'color'	=> '#00A1E9',
+	),
+	array(
+		'name'  => __( 'support yellow', 'matrix-color' ),
+		'slug'  => 'support-yellow',
+		'color' => '#EFBB00',
+	),
+	array(
+		'name'  => __( 'gray gray', 'matrix-color' ),
+		'slug'  => 'gray-scale',
+		'color' => '#6D6D6D',
+    ),
+	array(
+		'name'  => __( 'white', 'matrix-color' ),
+		'slug'  => 'pure-white',
+		'color' => '#FFF',
+    ),
+	array(
+		'name'  => __( 'block', 'matrix-color' ),
+		'slug'  => 'pure-block',
+		'color' => '#000',
+    )
+) );
+
+
+
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
 add_action( 'wp_enqueue_scripts', 'get_html_block_template_parts', 1 );
 add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
