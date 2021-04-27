@@ -595,7 +595,8 @@ header {
 
 .is-style-front-content,
 .wp-block-spacer,
-.wp-block-post-content > *:not(.wp-block-matrix-banner-block) {
+.wp-block-post-content > *:not(.wp-block-matrix-banner-block),
+.wp-site-blocks > .wp-block-matrix-call-to-action-block {
 	padding: 60px 120px;
 	background-color: #eeeeee;
 }
@@ -1908,17 +1909,6 @@ legend {
 	font-size: 0.85em;
 	font-weight: 700;
 	padding: 0 1rem;
-}
-
-input, textarea, button, .button, .faux-button, .wp-block-button__link, .wp-block-file__button {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	line-height: 1;
-}
-
-@supports ( font-variation-settings: normal) {
-	input, textarea, button, .button, .faux-button, .faux-button.more-link, .wp-block-button__link, .wp-block-file__button {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	}
 }
 
 input, textarea {
