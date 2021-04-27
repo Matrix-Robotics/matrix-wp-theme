@@ -673,11 +673,16 @@ header {
 	flex-basis: 75%;
 }
 
+/* 02-Call to Action -------------------------------- */
+
+.wp-block-matrix-call-to-action-block {
+	background-color: #002447!important;
+}
+
 
 /* 07-Product Fluid -------------------------------- */
 
 .wp-block-matrix-product-fluid {
-
 	
 }
 

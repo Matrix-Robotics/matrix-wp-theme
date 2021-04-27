@@ -1,6 +1,7 @@
 {
   "packages": [
     "01-banner",
+    "02-call-to-action",
     "07-product-fluid",
     "08-text-box-download",
     "08-text-box-lesson",
