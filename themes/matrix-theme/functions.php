@@ -27,6 +27,9 @@ if ( ! function_exists( 'matrix_theme_support' ) ) :
 
 	function theme_add_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
 	}
 
 	add_action( 'after_setup_theme', 'matrix_theme_support' );
