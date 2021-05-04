@@ -1062,6 +1062,7 @@ a.to-the-top>* {
 
 .wp-block-column ~ .wp-block-column {
 	margin: 0;
+	padding-left: 15px;
 }
 
 .wp-site-blocks, .wp-block-template-part.alignfull {
