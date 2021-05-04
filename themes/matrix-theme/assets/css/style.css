@@ -1059,6 +1059,10 @@ a.to-the-top>* {
 	padding-top: 0;
 }
 
+.wp-block-column ~ .wp-block-column {
+	margin: 0;
+}
+
 .wp-site-blocks, .wp-block-template-part.alignfull {
 	padding: 0 var(--wp--custom--margin--horizontal);
 }
