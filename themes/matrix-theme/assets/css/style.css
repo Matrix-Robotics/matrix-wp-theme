@@ -1413,7 +1413,9 @@ a.to-the-top>* {
 	.front-page .wp-block-template-part>*:first-child {
 		padding: 0 0 0 120px;
 	}
-	.wp-block-matrix-banner-block,
+	.wp-block-matrix-banner-block {
+		padding: 0 120px;
+	}
 	.woocommerce-breadcrumb,
 	.woocommerce-tabs,
 	.related.products {
