@@ -1248,6 +1248,7 @@ a.to-the-top>* {
 .products,
 .wc-block-grid__products {
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 15px;
 }
