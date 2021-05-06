@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Plugin Name:     Matrix Block
  * Description:     Gutenberg blocks for Matrix theme
@@ -10,6 +11,7 @@
  *
  */
 
+ 
 defined( 'ABSPATH' ) || exit;
 
 
@@ -19,33 +21,35 @@ defined( 'ABSPATH' ) || exit;
  *
  * Passes translations to JavaScript.
  */
-function call_to_action_register_block() {
+function text_box_register_script() {
 
 	// automatically load dependencies and version
 	$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
 
 	wp_register_script(
-		'call-to-action-editor-script',
+		'text-box-editor-script',
 		plugins_url( 'build/index.js', __FILE__ ),
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
-
-	wp_register_style(
-		'call-to-action-style',
+    
+    wp_register_style(
+		'text-box-style',
 		plugins_url( 'style.css', __FILE__ ),
 		array( ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
 	);
 
 	register_block_type( 
-		'matrix/call-to-action-block',
+		'matrix/text-box',
 		array(
-			'editor_script' => 'call-to-action-editor-script',
-			'style' 		=> 'call-to-action-style',
+			'editor_script' => 'text-box-editor-script',
+			'style' 		=> 'text-box-style',
 		)
 	);
 
+
 }
 
-add_action( 'init', 'call_to_action_register_block' );
+add_action( 'init', 'text_box_register_script' );
+

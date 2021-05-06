@@ -92,6 +92,9 @@ function matrix_theme_scripts() {
 	wp_enqueue_style( 'matrix-theme-style', get_template_directory_uri() . '/assets/css/style.css', array() );
 
 	// Register and enqueue nav.js.
+	wp_enqueue_script( 'matrix-block-js', get_template_directory_uri() . '/assets/js/block.js' , array( 'jquery' ), '1.0', true );
+
+	// Register and enqueue nav.js.
 	wp_enqueue_script( 'matrix-navigation-js', get_template_directory_uri() . '/assets/js/nav.js' , array( 'jquery' ), '1.0', true );
 
 	// Register and enqueue woocommerce.js.

@@ -19,33 +19,33 @@ defined( 'ABSPATH' ) || exit;
  *
  * Passes translations to JavaScript.
  */
-function call_to_action_register_block() {
+function list_register_block() {
 
 	// automatically load dependencies and version
 	$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
 
 	wp_register_script(
-		'call-to-action-editor-script',
+		'list-editor-script',
 		plugins_url( 'build/index.js', __FILE__ ),
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
 
 	wp_register_style(
-		'call-to-action-style',
+		'list-style',
 		plugins_url( 'style.css', __FILE__ ),
 		array( ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
 	);
 
 	register_block_type( 
-		'matrix/call-to-action-block',
+		'matrix/list-block',
 		array(
-			'editor_script' => 'call-to-action-editor-script',
-			'style' 		=> 'call-to-action-style',
+			'editor_script' => 'list-editor-script',
+			'style' 		=> 'list-style',
 		)
 	);
 
 }
 
-add_action( 'init', 'call_to_action_register_block' );
+add_action( 'init', 'list_register_block' );

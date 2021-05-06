@@ -5,15 +5,14 @@ import { SVG, Path } from '@wordpress/components';
 
 const TEMPLATE = [
 	[
-		'core/column',
-		{ width:100 } ,
-		[]
+		'core/list',
+		{ }
 	],
 ];
 
-registerBlockType( 'matrix/call-to-action-block', {
-	title: __( 'Call to Action', 'matrix' ),
-	icon: (<SVG xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize-2"><Path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/></SVG>),
+registerBlockType( 'matrix/list', {
+	title: __( 'List', 'matrix' ),
+	icon: (<SVG xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><Path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></SVG>),
 	category: 'matrix-block',
 	styles: [
 	],

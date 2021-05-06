@@ -1,5 +1,5 @@
 /**
- * Navigation Script
+ * Customized Matrix block plugin Script
  *
  * @package matrix theme
  */
@@ -23,42 +23,6 @@
         }
     });
 
-    mobileMenuToggle.change(function() {
-        if ($(this).is(':checked')) {
-            mobileMenu.addClass('flexbox');
-            cartLIcon.addClass('hidden');
-        } else {
-            mobileMenu.removeClass('flexbox');
-            cartLIcon.removeClass('hidden');
-        }
-    });
-
-    searchBarToggle.change(function() {
-        if ($(this).is(':checked')) {
-            searchBarInput.focus();
-        }
-    });
-
-    $(document).keyup(function(e) {
-        if (e.keyCode === 27) {
-            if ( searchBarInput.is(':focus') ) {
-                searchBarToggle.click();
-                searchBarInput.blur();
-            }
-            if ( i18nIcon.hasClass('click-label') ) {
-                i18nToggle.click();
-                i18nIcon.removeClass('click-label');
-            }
-        }
-    });
-
-    $(document).mouseup(function(e) {
-        if (!i18nIcon.is(e.target) && i18nIcon.has(e.target).length === 0) {
-            if ( i18nIcon.hasClass('click-label') ) {
-                i18nToggle.click();
-                i18nIcon.removeClass('click-label');
-            }
-        }
-    });
+   
 
 })( jQuery );

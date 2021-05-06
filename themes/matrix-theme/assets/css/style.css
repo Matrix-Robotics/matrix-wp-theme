@@ -680,6 +680,54 @@ header {
 	background-color: #002447!important;
 }
 
+/* 04-List -------------------------------- */
+
+.wp-block-matrix-list ul {
+	list-style-type: none;	
+	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: var(--font-size-l);
+}
+
+.wp-block-matrix-list > ul > li {
+	padding-top: 15px;
+	border-bottom: 1px solid #9A9A9A;
+	background: #fff;
+}
+
+
+.wp-block-matrix-list > ul > li p {
+	margin: 0;
+	padding-bottom: 15px;
+}
+
+.wp-block-matrix-list > ul > li > p {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.wp-block-matrix-list > ul > li > p:after {
+	content: url('data:image/svg+xml; utf8, <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 16l5-5-1-1-4 4-4.00001-4-1 1L11 15l1 1z" fill="black"/></svg>');
+	float: right;
+}
+
+.wp-block-matrix-list > ul > .bounce > p:after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.wp-block-matrix-list ul li ul {
+    display: none;
+	margin: 0;
+}
+
+.wp-block-matrix-list ul li li {
+	padding: 15px 15px 0 15px;
+	border-top: 1px solid #9A9A9A;
+    background: #F5F5FA;
+}
 
 /* 07-Product Fluid -------------------------------- */
 

@@ -22,6 +22,7 @@ include '04-list/index.php';
 include '05-table/index.php';
 include '06-card-fluid/index.php';
 include '07-product-fluid/index.php';
+include '08-text-box/index.php';
 include '08-text-box-download/index.php';
 include '08-text-box-lesson/index.php';
 include '08-text-box-started/index.php';
