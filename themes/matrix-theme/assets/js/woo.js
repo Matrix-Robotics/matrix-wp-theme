@@ -15,8 +15,10 @@
 
     $().ready(function() {
         addToCartBtn.addClass('is-style-action-btn');
-        cateType.text(function(index,text){
-            return text.replace('Category: ','');
+        cateType.text(function(i,text){
+            text = text.replace('Category: ','');
+            text = text.replace('Categories: ','');
+            return text;
         });
         cartOrderForm.before(skuNum);
         productTitle.before(cateType);
