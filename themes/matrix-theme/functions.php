@@ -190,6 +190,26 @@ add_theme_support( 'editor-color-palette', array(
 
 
 
+function modify_upload_mimes ( $mimes_types ) {
+    // add your extension to the mimes array as below
+    $mimes_types['zip'] = 'application/zip';
+    $mimes_types['gz'] = 'application/x-gzip';
+    return $mimes_types;
+}
+
+function add_allow_upload_extension_exception( $types, $file, $filename, $mimes ) {
+    // Do basic extension validation and MIME mapping
+    $wp_filetype = wp_check_filetype( $filename, $mimes );
+    $ext         = $wp_filetype['ext'];
+    $type        = $wp_filetype['type'];
+    if( in_array( $ext, array( 'zip', 'gz' ) ) ) { // it allows zip files
+        $types['ext'] = $ext;
+        $types['type'] = $type;
+    }
+    return $types;
+}
+
+
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
 add_action( 'wp_enqueue_scripts', 'get_html_block_template_parts', 1 );
 add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
@@ -203,3 +223,6 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_delimiter' );
 add_filter( 'woocommerce_get_breadcrumb', 'custom_breadcrumb', 10, 2 );
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+
+add_filter( 'upload_mimes', 'modify_upload_mimes', 99 );
+add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );
