@@ -1446,8 +1446,13 @@ a.to-the-top>* {
 	border-bottom: 1px solid #9a9a9a !important;
 }
 
-.woocommerce-tabs {
+.woocommerce-tabs,
+.related.products {
 	background-color: #eeeeee;
+}
+
+section.related.products {
+	padding-bottom: 40px;
 }
 
 .woocommerce-Tabs-panel {
