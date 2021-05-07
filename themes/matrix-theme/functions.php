@@ -193,7 +193,10 @@ add_theme_support( 'editor-color-palette', array(
 function modify_upload_mimes ( $mimes_types ) {
     // add your extension to the mimes array as below
     $mimes_types['zip'] = 'application/zip';
+    $mimes_types['rar'] = 'application/x-rar-compressed';
     $mimes_types['gz'] = 'application/x-gzip';
+    $mimes_types['step'] = 'application/STEP';
+    $mimes_types['stl'] = 'application/sla';
     return $mimes_types;
 }
 
@@ -202,7 +205,7 @@ function add_allow_upload_extension_exception( $types, $file, $filename, $mimes 
     $wp_filetype = wp_check_filetype( $filename, $mimes );
     $ext         = $wp_filetype['ext'];
     $type        = $wp_filetype['type'];
-    if( in_array( $ext, array( 'zip', 'gz' ) ) ) { // it allows zip files
+    if( in_array( $ext, array( 'zip', 'rar', 'gz', 'step', 'stl' ) ) ) {
         $types['ext'] = $ext;
         $types['type'] = $type;
     }
