@@ -1703,6 +1703,17 @@ html[xmlns] .flexslider .slides {
 	}
 }
 
+/* Profile Builder ---------------------------- */
+
+.pms-account-navigation {
+	margin: 0;
+}
+
+.pms-account-navigation p {
+	margin: 0;
+}
+
+
 /*--------------------------------------------------------------
 # - Media Queries
 --------------------------------------------------------------*/
