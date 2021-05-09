@@ -586,11 +586,14 @@ header {
 
 .is-style-front-content,
 .wp-block-spacer,
-.wp-block-query-loop,
 .wp-block-post-content>*:not(.wp-block-matrix-banner-block),
 .wp-site-blocks>.wp-block-matrix-call-to-action-block {
 	padding: 60px 120px;
 	background-color: #eeeeee;
+}
+
+.wp-block-query-loop .wp-block-post-title {
+	display: block;
 }
 
 .is-style-front-content h2 {
