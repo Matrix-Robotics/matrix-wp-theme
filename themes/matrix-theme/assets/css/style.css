@@ -6,7 +6,7 @@ Description: wordpress theme for new MATRIX site
 Requires at least: 5.3
 Tested up to: 5.5
 Requires PHP: 5.6
-Version: 1.0
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: matrix-theme
@@ -584,7 +584,11 @@ header {
 	padding-top: 300px;
 }
 
-.is-style-front-content, .wp-block-spacer, .wp-block-post-content>*:not(.wp-block-matrix-banner-block), .wp-site-blocks>.wp-block-matrix-call-to-action-block {
+.is-style-front-content,
+.wp-block-spacer,
+.wp-block-query-loop,
+.wp-block-post-content>*:not(.wp-block-matrix-banner-block),
+.wp-site-blocks>.wp-block-matrix-call-to-action-block {
 	padding: 60px 120px;
 	background-color: #eeeeee;
 }
@@ -1706,6 +1710,17 @@ html[xmlns] .flexslider .slides {
 		right: 10px;
 	}
 }
+
+/* Profile Builder ---------------------------- */
+
+.pms-account-navigation {
+	margin: 0;
+}
+
+.pms-account-navigation ~ p {
+	margin: 0;
+}
+
 
 /*--------------------------------------------------------------
 # - Media Queries
