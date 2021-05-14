@@ -782,6 +782,10 @@ header {
 
 /* 11-Button -------------------------------- */
 
+.is-style-cookie-btn {
+	background-color: #00A1E9!important;
+}
+
 .wp-block-button__link {
 	background-color: #00A1E9;
 	font-family: "Montserrat-600";
