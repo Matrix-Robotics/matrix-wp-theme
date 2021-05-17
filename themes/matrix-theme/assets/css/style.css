@@ -538,7 +538,7 @@ header {
 	position: absolute;
 	top: calc(100% - 0.5px);
 	right: 0px;
-	height: 230px;
+	height: 130px;
 	width: 317px;
 	color: var(--black-color);
 	background: var(--i18n-menu-color);
@@ -788,6 +788,10 @@ header {
 }
 
 /* 11-Button -------------------------------- */
+
+.is-style-cookie-btn {
+	background-color: #00A1E9!important;
+}
 
 .wp-block-button__link {
 	background-color: #00A1E9;
@@ -1727,7 +1731,11 @@ html[xmlns] .flexslider .slides {
 
 @media only screen and (min-width: 1240px) {
 	header.wp-block-template-part {
+		position: fixed;
+		top: 0;
+		width: 100%;
 		height: 78px;
+		transition: top 0.3s;
 		/* magic trick to fix 1px height gap between nav elements */
 		padding: 0 0 0 120px;
 		row-gap: 15px;

@@ -215,6 +215,8 @@ function add_allow_upload_extension_exception( $types, $file, $filename, $mimes 
     return $types;
 }
 
+// Remove XML-RPC function
+add_filter( 'xmlrpc_enabled', '__return_false' );
 
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
 add_action( 'wp_enqueue_scripts', 'get_html_block_template_parts', 1 );
