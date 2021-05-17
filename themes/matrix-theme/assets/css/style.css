@@ -538,7 +538,7 @@ header {
 	position: absolute;
 	top: calc(100% - 0.5px);
 	right: 0px;
-	height: 230px;
+	height: 130px;
 	width: 317px;
 	color: var(--black-color);
 	background: var(--i18n-menu-color);

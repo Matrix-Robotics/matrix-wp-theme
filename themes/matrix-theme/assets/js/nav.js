@@ -6,14 +6,16 @@
 
 (function ($) {
 
-    masthead = $('header.wp-block-template-part');
-    searchBarToggle = masthead.find('#search-btn');
-    searchBarInput = masthead.find('#is-search-input-65');
-    mobileMenuToggle = masthead.find('#menu-btn');
-    mobileMenu = masthead.find('.nav-menu-mobile');
-    i18nToggle = masthead.find('#i18n-btn');
-    i18nIcon = masthead.find('.i18n-icon');
-    cartLIcon = masthead.find('.cart-icon-desktop');
+    masthead            = $('header.wp-block-template-part');
+    searchBarToggle     = masthead.find('#search-btn');
+    searchBarInput      = masthead.find('#is-search-input-65');
+    mobileMenuToggle    = masthead.find('#menu-btn');
+    mobileMenu          = masthead.find('.nav-menu-mobile');
+    i18nToggle          = masthead.find('#i18n-btn');
+    i18nIcon            = masthead.find('.i18n-icon');
+    i18nSelect          = masthead.find('.i18n-select select');
+    i18nOption          = masthead.find('.i18n-select select option');
+    cartLIcon           = masthead.find('.cart-icon-desktop');
 
     prevScrollpos = window.pageYOffset;
 
@@ -25,7 +27,6 @@
             masthead.css("top", "-80px" );
         }
         prevScrollpos = currentScrollPos;
-        console.log(prevScrollpos);
     };
 
     i18nToggle.change(function () {
@@ -36,6 +37,15 @@
         }
     });
 
+    i18nSelect.on( 'change', function() {
+        selectedLanguage = i18nOption.filter(':selected').val();
 
+        currentContent = location.pathname.substring(
+            location.pathname.indexOf("/", 1) + 1,
+            location.pathname.length
+        );
+
+        window.location.href = "/" + selectedLanguage + "/" + currentContent;
+    });
 
 })(jQuery);
