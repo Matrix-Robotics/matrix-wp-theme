@@ -895,7 +895,7 @@ footer {
 	font-size: var(--font-size-m);
 }
 
-.footer-bottom {
+#footer-bottom {
 	font-family: "IBM Plex Sans-400", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: var(--font-size-s);
 }
