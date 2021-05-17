@@ -6,7 +6,7 @@
 
 (function ($) {
 
-    masthead            = $('header.wp-block-template-part');
+    masthead            = $(' header ');
     searchBarToggle     = masthead.find('#search-btn');
     searchBarInput      = masthead.find('#is-search-input-65');
     mobileMenuToggle    = masthead.find('#menu-btn');
@@ -16,18 +16,6 @@
     i18nSelect          = masthead.find('.i18n-select select');
     i18nOption          = masthead.find('.i18n-select select option');
     cartLIcon           = masthead.find('.cart-icon-desktop');
-
-    prevScrollpos = window.pageYOffset;
-
-    window.onscroll = function () {
-        currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            masthead.css("top", "0" );
-        } else {
-            masthead.css("top", "-80px" );
-        }
-        prevScrollpos = currentScrollPos;
-    };
 
     i18nToggle.change(function () {
         if ($(this).is(':checked')) {
