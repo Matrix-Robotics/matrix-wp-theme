@@ -1268,18 +1268,18 @@ a.to-the-top>* {
 
 .products, .wc-block-grid__products {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
-	gap: 15px;
+	gap: calc( ((100%-15px) - 90%) / 3);
 }
 
 .products .product.type-product, .wc-block-grid__product {
-	max-width: 20%;
+	max-width: 22.5%;
 	display: inline-block;
 	background: white;
 	list-style-type: none;
-	min-width: 12em;
 	padding: 0 0 15px 0;
+	margin-bottom: 30px;
 	border: 1px solid #516A9F;
 }
 
