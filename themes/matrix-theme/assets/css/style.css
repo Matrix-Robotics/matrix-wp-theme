@@ -1739,9 +1739,10 @@ html[xmlns] .flexslider .slides {
 		padding: 0 0 0 120px;
 		row-gap: 15px;
 		column-gap: 15px;
+		z-index: 200;
 	}
-	header.wp-block-template-part + div:first-child {
-		margin-top: 78px;
+	header.wp-block-template-part + div {
+		margin-top: 78px!important;
 	}
 	.front-page .wp-block-template-part > *:first-child {
 		padding: 0 0 0 120px;
