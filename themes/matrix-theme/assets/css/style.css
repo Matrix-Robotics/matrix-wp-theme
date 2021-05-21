@@ -1389,7 +1389,7 @@ a.to-the-top>* {
 	line-height: 40px;
 }
 
-.cart {
+form.cart {
 	display: flex;
 	padding-right: 15px;
 }
