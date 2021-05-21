@@ -1302,6 +1302,7 @@ a.to-the-top>* {
 .button.product_type_simple,
 .woocommerce-loop-product__title,
 .woocommerce-LoopProduct-link .price {
+	display: block;
 	text-align: center;
 	margin: 15px 15px !important;
 }
@@ -1310,7 +1311,11 @@ a.to-the-top>* {
 .woocommerce button.button.added::after,
 .woocommerce input.button.added::after,
 .woocommerce #respond input#submit.added::after {
-    content: "v";
+    content: ' '!important;
+	background-image: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M13.717 4.069l-7.861 7.862-3.573-3.574'/%3E%3C/svg%3E");
+	display: inline-block;
+	height: 16px;
+	width: 16px;
 }
 
 .wc-block-grid__product-link, .wc-block-components-product-title {
@@ -1437,7 +1442,7 @@ form.cart {
 	width: 120px;
 }
 
-.cart .quantity input, {
+.cart .quantity input {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;

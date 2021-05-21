@@ -7,7 +7,8 @@
  (function( $ ) {
 
   product             = $( '.product' );
-  productTitle        = product.find ( '.product_title' );
+  productCard         = product.find( '.type-product' );
+  productTitle        = product.find( '.product_title' );
   addToCartBtn        = product.find( 'button' );
   cartOrderForm       = product.find( '.cart' );
   skuNum              = product.find( '.product_meta' );
@@ -15,6 +16,7 @@
 
 
   $().ready(function() {
+    productCard.addClass( 'woocommerce' );
     addToCartBtn.addClass( 'is-style-action-btn' );
     cateType.text(function(i,text){
         text = text.replace('Category: ','');
