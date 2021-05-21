@@ -1271,12 +1271,25 @@ a.to-the-top>* {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	gap: calc( ((100%-15px) - 90%) / 3);
+	gap: calc( 10% / 3 );
+	gap: calc( ((100%-15px) - 90%) / 3 );
 }
 
-.products .product.type-product, .wc-block-grid__product {
+.woocommerce .products ul::before,
+.woocommerce .products ul::after,
+.woocommerce ul.products::before,
+.woocommerce ul.products::after,
+.wc-block-grid__product-add-to-cart {
+	display: none !important;
+}
+
+.products .product.type-product,
+.wc-block-grid__product {
 	max-width: 22.5%;
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	background: white;
 	list-style-type: none;
 	padding: 0 0 15px 0;
@@ -1285,10 +1298,19 @@ a.to-the-top>* {
 }
 
 .wc-block-grid__product-link>*:not(.attachment-woocommerce_thumbnail),
-.woocommerce-LoopProduct-link>*:not(.attachment-woocommerce_thumbnail),
 .wc-block-grid__product>*:not(.wc-block-components-product-image),
-.button.product_type_simple {
-	margin: 15px 15px;
+.button.product_type_simple,
+.woocommerce-loop-product__title,
+.woocommerce-LoopProduct-link .price {
+	text-align: center;
+	margin: 15px 15px !important;
+}
+
+.woocommerce a.button.added::after,
+.woocommerce button.button.added::after,
+.woocommerce input.button.added::after,
+.woocommerce #respond input#submit.added::after {
+    content: "v";
 }
 
 .wc-block-grid__product-link, .wc-block-components-product-title {
@@ -1300,6 +1322,15 @@ a.to-the-top>* {
 .wc-block-grid__product-price {
 	font-family: "IBM Plex Sans-400", -apple-ㄉsystem, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: var(--font-size-l);
+}
+
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce .button.product_type_simple,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt {
+	color: #FFFFFF;
+	background-color: #00A1E9!important;
 }
 
 /* TODO  */
@@ -1394,7 +1425,9 @@ form.cart {
 	padding-right: 15px;
 }
 
-.cart .quantity {
+.cart .quantity,
+.page-numbers,
+.page-numbers li {
 	flex-basis: 62.5%;
 	margin-right: 10px;
 	border: 0 !important;
@@ -1404,7 +1437,7 @@ form.cart {
 	width: 120px;
 }
 
-.cart .quantity input {
+.cart .quantity input, {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;

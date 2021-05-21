@@ -1,4 +1,6 @@
 node_modules/
 build/
 
+plugins/
+!plugins/matrix-block/
 !plugins/matrix-block/**/build/
