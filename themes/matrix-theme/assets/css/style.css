@@ -1271,6 +1271,7 @@ a.to-the-top>* {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+	width: 100%;
 	gap: calc( 10% / 3 );
 	gap: calc( ((100%-15px) - 90%) / 3 );
 }
@@ -1454,12 +1455,20 @@ form.cart {
 	border-bottom: 1px solid #9a9a9a !important;
 }
 
-.woocommerce-tabs, .related.products {
+.woocommerce-tabs,
+.related.products,
+.up-sells.upsells.products {
 	background-color: #eeeeee;
 }
 
-section.related.products {
+section.related.products,
+section.up-sells.upsells.products {
 	padding-bottom: 40px;
+}
+
+section.related.products > h2,
+section.up-sells.upsells.products > h2{
+	width: 100%
 }
 
 .woocommerce-Tabs-panel {
@@ -1792,7 +1801,10 @@ html[xmlns] .flexslider .slides {
 	.wp-block-matrix-banner-block {
 		padding: 0 120px;
 	}
-	.woocommerce-breadcrumb, .woocommerce-tabs, .related.products {
+	.woocommerce-breadcrumb,
+	.woocommerce-tabs,
+	.related.products,
+	.up-sells.upsells.products {
 		padding: 0 320px;
 	}
 	.wp-block-matrix-columns-block {
