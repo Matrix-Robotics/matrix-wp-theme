@@ -756,6 +756,14 @@ header {
 	border: 1px solid #516A9F;
 }
 
+.wp-block-matrix-text-box-download svg,
+.wp-block-matrix-text-box-lesson svg,
+.wp-block-matrix-text-box-started svg,
+.wp-block-matrix-text-box-support svg {
+	margin-top: 25px;
+}
+
+
 /* 09-Horizental Card -------------------------------- */
 
 /* TODO RWD */
