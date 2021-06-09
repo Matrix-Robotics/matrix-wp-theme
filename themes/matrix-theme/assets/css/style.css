@@ -2252,6 +2252,18 @@ html[xmlns] .flexslider .slides {
 	.nav-media-s, .sitemap-media-s {
 		display: flex!important;
 	}
+	.footer-title, .accordion-title {
+		font-size: var(--font-size-tablet-xxl);
+	}
+	.footer-menu-title, .accordion-menu-title {
+		font-size: var(--font-size-tablet-navItem);
+	}
+	.footer-menu>.footer-menu-sub, .accordion-menu>.accordion-menu-sub {
+		font-size: var(--font-size-tablet-l);
+	}
+	#footer-bottom {
+		font-size: var(--font-size-tablet-s);
+	}
 
 	/* 01-Banner tablet RWD  */
 	.wp-block-matrix-banner-block {
@@ -2704,6 +2716,18 @@ html[xmlns] .flexslider .slides {
 	}
 	.nav-media-s, .sitemap-media-s {
 		display: flex!important;
+	}
+	.footer-title, .accordion-title {
+		font-size: var(--font-size-mobile-xxl);
+	}
+	.footer-menu-title, .accordion-menu-title {
+		font-size: var(--font-size-mobile-navItem);
+	}
+	.footer-menu>.footer-menu-sub, .accordion-menu>.accordion-menu-sub {
+		font-size: var(--font-size-mobile-l);
+	}
+	#footer-bottom {
+		font-size: var(--font-size-mobile-s);
 	}
 
 	/* 01-Banner mobile RWD  */
