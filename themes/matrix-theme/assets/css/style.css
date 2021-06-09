@@ -936,6 +936,11 @@ footer {
 
 /* Footer Accordion -------------------------------- */
 
+.accordion-menu {
+	margin-left: 0!important;
+	padding: 0!important;
+}
+
 .accordion-el {
 	display: flex;
 	flex-direction: column;
@@ -1870,7 +1875,7 @@ html[xmlns] .flexslider .slides {
 		margin-top: 30px;
 	}
 	.nav-media-l, .sitemap-media-l {
-		display: flex;
+		display: flex!important;
 	}
 	.nav-media-s, .sitemap-media-s {
 		display: none!important;
@@ -2005,6 +2010,9 @@ html[xmlns] .flexslider .slides {
 	}
 	.nav-dd>.wp-block-column {
 		flex-basis: 100%!important;
+	}
+	.nav-dd .wp-block-column {
+		margin: 0!important;
 	}
 	.nav-dd-icon {
 		display: block;
@@ -2228,20 +2236,21 @@ html[xmlns] .flexslider .slides {
 		row-gap: 15px;
 		column-gap: 15px;
 	}
-	.footer-el .wp-block-column, .accordion-el .wp-block-column, .nav-dd .wp-block-column {
-		margin: 0!important;
-	}
 	.footer-el+.footer-el {
 		margin-top: 45px;
 	}
 	.accordion-menu+.accordion-menu {
-		margin-top: 30px;
+		margin-top: 50px;
+	}
+	.accordion-menu-sub {
+		padding-left: 20px;
+		margin-top: 25px;
 	}
 	.nav-media-l, .sitemap-media-l {
-		display: none;
+		display: none!important;
 	}
 	.nav-media-s, .sitemap-media-s {
-		display: flex;
+		display: flex!important;
 	}
 
 	/* 01-Banner tablet RWD  */
@@ -2454,6 +2463,9 @@ html[xmlns] .flexslider .slides {
 	}
 	.nav-dd>.wp-block-column {
 		flex-basis: 100%!important;
+	}
+	.nav-dd .wp-block-column {
+		margin: 0!important;
 	}
 	.nav-dd-icon {
 		display: block;
@@ -2677,20 +2689,21 @@ html[xmlns] .flexslider .slides {
 		row-gap: 10px;
 		column-gap: 10px;
 	}
-	.footer-el .wp-block-column, .accordion-el .wp-block-column, .nav-dd .wp-block-column {
-		margin: 0!important;
-	}
 	.footer-el+.footer-el {
 		margin-top: 30px;
 	}
 	.accordion-menu+.accordion-menu {
-		margin-top: 30px;
+		margin-top: 15px;
+	}
+	.accordion-menu-sub {
+		padding-left: 10px;
+		margin-top: 15px;
 	}
 	.nav-media-l, .sitemap-media-l {
-		display: none;
+		display: none!important;
 	}
 	.nav-media-s, .sitemap-media-s {
-		display: flex;
+		display: flex!important;
 	}
 
 	/* 01-Banner mobile RWD  */
