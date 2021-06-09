@@ -105,7 +105,7 @@ matrix theme is distributed under the terms of the GNU GPL.
 	--font-size-mobile-m: 1.3rem;
 	--font-size-mobile-s: 1.2rem;
 	--title-font: "Montserrat-500";
-	--text-font: "Montserrat-500";
+	--text-font: "IBM Plex Sans-400";
 	--title-font-weight: bold;
 	--navi-font-weight: normal;
 	--title-text-transform: none;
@@ -137,27 +137,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 36px;
+	font-size: var(--font-size-xxxl);
 }
 
 h2 {
-	font-size: 28px;
+	font-size: var(--font-size-xxl);
 }
 
 h3 {
-	font-size: 24px;
+	font-size: var(--font-size-xl);
 }
 
 h4 {
-	font-size: 22px;
+	font-size: var(--font-size-l);
 }
 
 h5 {
-	font-size: 20px;
+	font-size: var(--font-size-m);
 }
 
 h6 {
-	font-size: 19px;
+	font-size: var(--font-size-s);
 }
 
 p {
@@ -747,15 +747,11 @@ header {
 	background: #F5F5FA;
 }
 
-/* 07-Product Fluid -------------------------------- */
-
-.wp-block-matrix-product-fluid {}
-
 /* 08-Text Box -------------------------------- */
 
 .wp-block-matrix-text-box-download, .wp-block-matrix-text-box-lesson, .wp-block-matrix-text-box-started, .wp-block-matrix-text-box-support {
 	background-color: #fff;
-	padding: 25px 20px !important;
+	padding: 0 0 25px 0 !important;
 	text-align: center;
 	border: 1px solid #516A9F;
 }
@@ -1351,6 +1347,17 @@ a.to-the-top>* {
 	width: 16px;
 }
 
+.woocommerce-LoopProduct-link,
+.wc-block-grid__product-link {
+	flex-basis: 100%;
+}
+
+.woocommerce-LoopProduct-link img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .wc-block-grid__product-link, .wc-block-components-product-title, .woocommerce-loop-product__title {
 	font-family: "Montserrat-500", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: var(--font-size-xl);
@@ -1823,13 +1830,16 @@ html[xmlns] .flexslider .slides {
 		column-gap: 15px;
 		z-index: 200;
 	}
-	header.wp-block-template-part + div {
+	header.wp-block-template-part + div,
+	.entry-content {
 		margin-top: 78px!important;
 	}
 	.front-page .wp-block-template-part > *:first-child {
 		padding: 0 0 0 120px;
 	}
-	
+	.wp-block-matrix-banner-block.is-style-regular-banner {
+		padding: 0 120px;
+	}
 	.wp-block-matrix-columns-block {
 		padding: 60px 320px;
 	}
@@ -1871,6 +1881,24 @@ html[xmlns] .flexslider .slides {
 }
 
 @media only screen and (max-width: 1239px) and (min-width: 992px) {
+	h1 {
+		font-size: var(--font-size-tablet-xxxl);
+	}
+	h2 {
+		font-size: var(--font-size-tablet-xxl);
+	}
+	h3 {
+		font-size: var(--font-size-tablet-xl);
+	}
+	h4 {
+		font-size: var(--font-size-tablet-l);
+	}
+	h5 {
+		font-size: var(--font-size-tablet-m);
+	}
+	h6 {
+		font-size: var(--font-size-tablet-s);
+	}
 	.wp-site-blocks .alignfull {
 		transform: translateX(0px);
 		width: 100%;
@@ -2281,6 +2309,24 @@ html[xmlns] .flexslider .slides {
 }
 
 @media only screen and (max-width: 991px) {
+	h1 {
+		font-size: var(--font-size-mobile-xxxl);
+	}
+	h2 {
+		font-size: var(--font-size-mobile-xxl);
+	}
+	h3 {
+		font-size: var(--font-size-mobile-xl);
+	}
+	h4 {
+		font-size: var(--font-size-mobile-l);
+	}
+	h5 {
+		font-size: var(--font-size-mobile-m);
+	}
+	h6 {
+		font-size: var(--font-size-mobile-s);
+	}
 	.wp-site-blocks .alignfull {
 		transform: translateX(0px);
 		width: 100%;
@@ -2639,13 +2685,14 @@ html[xmlns] .flexslider .slides {
 	}
 
 	/* 01-Banner mobile RWD  */
-	.wp-block-matrix-banner-block {
-		padding: 0 60px;
-	}
-	.wp-block-matrix-banner-block.is-style-hero-banner {
+	.wp-block-matrix-banner-block.is-style-hero-banner,
+	.wp-block-matrix-banner-block.is-style-regular-banner {
 		display: flex;
-		height: 750px;
+		max-height: 750px;
 		overflow: hidden;
+	}
+	.wp-block-matrix-banner-block.is-style-regular-banner {
+		padding: 0;
 	}
 	.wp-block-matrix-banner-block .wp-block-column~.wp-block-column {
 		margin-top: 0px;
@@ -2657,17 +2704,29 @@ html[xmlns] .flexslider .slides {
 		object-fit: none;
 		object-position: 10% 10%;
 	}
-	.wp-block-matrix-banner-block.is-style-hero-banner h2 {
+	.wp-block-matrix-banner-block.is-style-hero-banner h2,
+	.wp-block-matrix-banner-block.is-style-regular-banner h2 {
 		margin-top: 68px;
-		font-family: "Montserrat-700";
 		font-size: var(--font-size-mobile-headline);
 	}
-	.wp-block-matrix-banner-block.is-style-hero-banner p {
+	.wp-block-matrix-banner-block.is-style-regular-banner h2 {
+		padding: 0 15px;
+	}
+	.wp-block-matrix-banner-block.is-style-hero-banner p,
+	.wp-block-matrix-banner-block.is-style-regular-banner p {
 		line-height: 38px;
 		font-family: "Montserrat-600";
 		font-size: var(--font-size-mobile-subline);
 	}
-
+	.wp-block-matrix-banner-block.is-style-regular-banner img {
+		min-height: 300px;
+		min-width: 1100px;
+	}
+	.wp-block-matrix-banner-block.is-style-regular-banner .wp-block-column:first-child,
+	.wp-block-matrix-banner-block.is-style-regular-banner .wp-block-column:last-child {
+		flex-basis: 100%!important;
+	}
+	
 	/* WooCommerce mobile RWD  */
 	.products .product.type-product,
 	.wc-block-grid__product {
