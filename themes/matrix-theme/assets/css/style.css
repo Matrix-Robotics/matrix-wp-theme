@@ -2349,7 +2349,8 @@ html[xmlns] .flexslider .slides {
 		padding-left: 0;
 	}
 	.site-content .wp-block-column,
-	.is-style-front-content .wp-block-column {
+	.is-style-front-content .wp-block-column,
+	.entry-content .wp-block-column {
 		flex-basis: 100%!important;
 	}
 	.nav-dd, .i18n-dd {
@@ -2685,11 +2686,13 @@ html[xmlns] .flexslider .slides {
 	}
 
 	/* 01-Banner mobile RWD  */
-	.wp-block-matrix-banner-block.is-style-hero-banner,
-	.wp-block-matrix-banner-block.is-style-regular-banner {
+	.wp-block-matrix-banner-block.is-style-hero-banner {
 		display: flex;
-		max-height: 750px;
+		height: 750px;
 		overflow: hidden;
+	}
+	.wp-block-matrix-banner-block.is-style-regular-banner {
+		height: auto;
 	}
 	.wp-block-matrix-banner-block.is-style-regular-banner {
 		padding: 0;
@@ -2726,7 +2729,7 @@ html[xmlns] .flexslider .slides {
 	.wp-block-matrix-banner-block.is-style-regular-banner .wp-block-column:last-child {
 		flex-basis: 100%!important;
 	}
-	
+
 	/* WooCommerce mobile RWD  */
 	.products .product.type-product,
 	.wc-block-grid__product {
