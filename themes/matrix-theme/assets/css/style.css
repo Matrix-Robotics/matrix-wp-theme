@@ -2048,10 +2048,10 @@ html[xmlns] .flexslider .slides {
 	}
 	.is-search-form {
 		display: none;
-		top: -25px;
+		top: -20px;
 		position: fixed;
 		width: 100vw;
-		height: 100vh;
+		height: 105vh;
 		background: var(--header-menu-color);
 		background-size: cover;
 		z-index: 10;
@@ -2168,7 +2168,7 @@ html[xmlns] .flexslider .slides {
 		top: -69px;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 105vh;
 		color: #ffffff!important;
 		background: var(--header-menu-color);
 		background-size: cover;
@@ -2236,10 +2236,10 @@ html[xmlns] .flexslider .slides {
 		align-items: flex-start;
 		justify-content: flex-start;
 		padding: 60px 0;
-		position: fixed;
+		position: absolute;
 		top: calc(100% - 0.5px);
 		left: -30px;
-		width: 110vw;
+		width: 105vw;
 		height: 100vh;
 		background: var(--header-background-color);
 		background-size: cover;
@@ -2382,18 +2382,19 @@ html[xmlns] .flexslider .slides {
 		cursor: pointer;
 	}
 	.nav-search-esc>svg {
-		position: absolute;
-		top: -40px;
-		right: 100px;
+		position: fixed;
+		top: 12px;
+		right: 6px;
 		transform: scale(1.5);
 		z-index: 150;
 	}
 	.is-search-form {
 		display: none;
-		top: -25px;
+		top: -15px;
+		left: -15px;
 		position: fixed;
 		width: 100vw;
-		height: 100vh;
+		height: 105vh;
 		background: var(--header-menu-color);
 		background-size: cover;
 		z-index: 10;
@@ -2444,9 +2445,9 @@ html[xmlns] .flexslider .slides {
 	.nav-i18n-esc {
 		display: none;
 		cursor: pointer;
-		position: absolute;
-		top: -20px;
-		right: 100px;
+		position: fixed;
+		top: 30px;
+		right: 6px;
 		transform: scale(1.5);
 	}
 	.nav-i18n-icon {
@@ -2461,11 +2462,11 @@ html[xmlns] .flexslider .slides {
 		margin-top: 40%;
 		margin-left: auto;
   		margin-right: auto;
-		width: 600px;
+		width: 80vw;
 	}
 	.i18n-select {
 		position: relative;
-		width: 600px;
+		width: 80vw;
 		height: 65px;
 		border-bottom: 1px solid #9a9a9a !important;
 	}
@@ -2508,9 +2509,9 @@ html[xmlns] .flexslider .slides {
 		justify-content: center;
 		position: absolute;
 		top: -69px;
-		left: 0;
+		left: 15px;
 		width: 100vw;
-		height: 100vh;
+		height: 105vh;
 		color: #ffffff!important;
 		background: var(--header-menu-color);
 		background-size: cover;
