@@ -2325,6 +2325,9 @@ html[xmlns] .flexslider .slides {
 		flex-wrap: wrap;
 		font-size: var(--font-size-tablet-m);
 	}
+	.flex-control-thumbs li {
+		margin: 5px;
+	}
 	.wc-block-grid__product-link,
 	.wc-block-components-product-title,
 	.tabs.wc-tabs {
@@ -2422,7 +2425,7 @@ html[xmlns] .flexslider .slides {
 		justify-content: flex-start;
 		padding: 60px 0;
 		position: absolute;
-		top: calc(100% - 0.5px);
+		top: calc(100% - 5px);
 		left: -30px;
 		width: 105vw;
 		height: 100vh;
@@ -2841,7 +2844,7 @@ html[xmlns] .flexslider .slides {
 		flex-basis: 100%;
 	}
 	.flex-control-thumbs li {
-		margin: 5;
+		margin: 3px;
 	}
 	.woocommerce-loop-product__title {
 		font-size: var(--font-size-mobile-xl);
