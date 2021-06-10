@@ -1933,6 +1933,9 @@ html[xmlns] .flexslider .slides {
 	.wp-site-blocks>.wp-block-matrix-call-to-action-block {
 		padding: 60px;
 	}
+	.wp-block-matrix-columns-block {
+		padding: 30px 60px;
+	}
 
 	/* navbar menu tablet RWD  */
 	.nav-logo {
@@ -2404,6 +2407,9 @@ html[xmlns] .flexslider .slides {
 	.wp-block-post-content>*:not(.wp-block-matrix-banner-block),
 	.wp-site-blocks>.wp-block-matrix-call-to-action-block {
 		padding: 15px;
+	}
+	.wp-block-matrix-columns-block {
+		padding: 10px 15px;
 	}
 
 	/* navbar menu mobile RWD  */
