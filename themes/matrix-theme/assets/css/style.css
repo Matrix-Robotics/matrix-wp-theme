@@ -2841,11 +2841,11 @@ html[xmlns] .flexslider .slides {
 --------------------------------------------------------------*/
 
 .flexbox {
-	display: flex;
+	display: flex!important;
 }
 
 .hidden {
-	display: none;
+	display: none!important;
 }
 
 
