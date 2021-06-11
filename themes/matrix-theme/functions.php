@@ -161,6 +161,17 @@ function woo_new_product_tab( $tabs ) {
 }
 
 
+/**
+ * Redirect "Return to shop" button to Store page
+ */
+
+function woo_empty_cart_redirect_url() {
+	$url = 'https://matrixrobotics.com/store';
+	return esc_url( $url );
+}
+
+
+
 
 
 add_theme_support( 'editor-color-palette', array(
@@ -235,3 +246,4 @@ add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 
 add_filter( 'upload_mimes', 'modify_upload_mimes', 99 );
 add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );
+add_filter( 'woocommerce_return_to_shop_redirect', 'woo_empty_cart_redirect_url' );
