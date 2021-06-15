@@ -6,7 +6,7 @@
 
 (function ($) {
 
-    header            = $(' header ');
+    header              = $(' header ');
     searchBar           = header.find('.is-search-form');
     searchBarToggle     = header.find('#search-btn');
     searchBarInput      = header.find('#is-search-input-65');
