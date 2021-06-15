@@ -1,16 +1,30 @@
-web:
- image: wordpress
- volumes:
-  - ./themes:/var/www/html/wp-content/themes/
-  - ./plugins:/var/www/html/wp-content/plugins/
- links:
-  - mariadb:mysql
- environment:
-  - WORDPRESS_DB_PASSWORD=password
- ports:
-  - "127.0.0.1:8889:80"
-mariadb:
- image: mariadb:latest
- environment:
-  - MYSQL_ROOT_PASSWORD=password
-  - MYSQL_DATABASE=matrix-wp-local-db
+version: "3.9"
+
+services:
+  wordpress:
+   depends_on:
+    - mariadb
+   image: wordpress
+   volumes:
+    - ./themes:/var/www/html/wp-content/themes/
+    - ./plugins:/var/www/html/wp-content/plugins/
+   links:
+    - mariadb:mysql
+   environment:
+    WORDPRESS_DB_USER: wordpress
+    WORDPRESS_DB_PASSWORD: password
+    WORDPRESS_DB_HOST: mariadb:3306
+   ports:
+    - "8889:80"
+   restart: always
+
+  mariadb:
+   image: mariadb:latest
+   ports:
+    - "3306:3306"
+   environment:
+    MYSQL_USER: wordpress
+    MYSQL_ROOT_PASSWORD: password
+    MYSQL_PASSWORD: password
+    MYSQL_DATABASE: wordpress
+    restart: always
