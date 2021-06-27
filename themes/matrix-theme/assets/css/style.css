@@ -749,11 +749,30 @@ header {
 
 /* 08-Text Box -------------------------------- */
 
-.wp-block-matrix-text-box-download, .wp-block-matrix-text-box-lesson, .wp-block-matrix-text-box-started, .wp-block-matrix-text-box-support {
+.wp-block-matrix-text-box-download,
+.wp-block-matrix-text-box-lesson,
+.wp-block-matrix-text-box-started,
+.wp-block-matrix-text-box-support {
 	background-color: #fff;
 	padding: 0 0 25px 0 !important;
 	text-align: center;
 	border: 1px solid #516A9F;
+	transition: all 0.1s ease-out;
+}
+
+.wp-block-matrix-text-box-download.selected,
+.wp-block-matrix-text-box-lesson.selected,
+.wp-block-matrix-text-box-started.selected,
+.wp-block-matrix-text-box-support.selected {
+	border: 2px solid #0095D8!important;
+	transition: all 0s ease-out;
+}
+
+.wp-block-matrix-text-box-download:hover,
+.wp-block-matrix-text-box-lesson:hover,
+.wp-block-matrix-text-box-started:hover,
+.wp-block-matrix-text-box-support:hover {
+	border: 0px;
 }
 
 .wp-block-matrix-text-box-download svg,
@@ -771,6 +790,16 @@ header {
 	align-items: center;
 	background-color: #fff;
 	border: 1px solid #516A9F;
+	transition: all 0.1s ease-out;
+}
+
+.wp-block-matrix-horizental-card.selected {
+	border: 2px solid #0095D8!important;
+	transition: all 0s ease-out;
+}
+
+.wp-block-matrix-horizental-card:hover {
+	border: 0px;
 }
 
 .wp-block-matrix-horizental-card .wp-block-group {
@@ -1334,6 +1363,18 @@ a.to-the-top>* {
 	padding: 0 0 15px 0;
 	margin-bottom: 30px;
 	border: 1px solid #516A9F;
+	transition: all 0.1s ease-out;
+}
+
+.products .product.type-product.selected,
+.wc-block-grid__product.selected {
+	border: 2px solid #0095D8!important;
+	transition: all 0s ease-out;
+}
+
+.products .product.type-product:hover,
+.wc-block-grid__product:hover {
+	border-width: 0px;
 }
 
 .wc-block-grid__product-link>*:not(.attachment-woocommerce_thumbnail),
