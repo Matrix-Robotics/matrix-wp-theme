@@ -1420,9 +1420,11 @@ a.to-the-top>* {
 	font-size: var(--font-size-l);
 }
 
+
+#wp-submit, #register,
+.product button.button.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.product button.button.alt,
 .woocommerce .button.product_type_simple,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt {
@@ -1431,9 +1433,10 @@ a.to-the-top>* {
 	transition: all 0.15s linear;
 }
 
+#wp-submit:hover, #register:hover,
+.product button.button.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.product button.button.alt:hover,
 .woocommerce .button.product_type_simple:hover,
 .woocommerce input.button.alt:hover,
 .woocommerce #respond input#submit.alt:hover {
@@ -1441,6 +1444,7 @@ a.to-the-top>* {
 	background-color: #09BCFA!important;
 }
 
+#wp-submit:active, #register:active,
 .woocommerce a.button.alt:active,
 .woocommerce button.button.alt:active,
 .product button.button.alt:active,
