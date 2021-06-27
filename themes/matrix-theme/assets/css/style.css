@@ -1422,11 +1422,33 @@ a.to-the-top>* {
 
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
+.product button.button.alt,
 .woocommerce .button.product_type_simple,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt {
 	color: #FFFFFF;
 	background-color: #00A1E9!important;
+	transition: all 0.15s linear;
+}
+
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.product button.button.alt:hover,
+.woocommerce .button.product_type_simple:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit.alt:hover {
+	color: #FFFFFF;
+	background-color: #09BCFA!important;
+}
+
+.woocommerce a.button.alt:active,
+.woocommerce button.button.alt:active,
+.product button.button.alt:active,
+.woocommerce .button.product_type_simple:active,
+.woocommerce input.button.alt:active,
+.woocommerce #respond input#submit.alt:active {
+	color: #FFFFFF;
+	background-color: #0079B0!important;
 }
 
 /* TODO  */
@@ -2984,9 +3006,11 @@ html[xmlns] .flexslider .slides {
 
 
 
-/* -------------------------------------------------------------------------- */
+/* ======================    Wordpress Default Setting    ====================== */
 
-/*	1. Document Setup
+
+/* -------------------------------------------------------------------------- */
+/* 1. Document Setup
 /* -------------------------------------------------------------------------- */
 
 /* Clearing ---------------------------------- */
