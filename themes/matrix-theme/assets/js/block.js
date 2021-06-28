@@ -22,6 +22,13 @@
         $(this).toggleClass( "selected" );
     });
 
+    cards.mouseleave(function (e) {
+        var selected = $(this).hasClass('selected');
+        if(selected) {
+            $(this).toggleClass( "selected" );
+        }
+    });
+
     listBlock.each(function() {
         $(this).contents().eq(0).wrap('<p/>');
     });
