@@ -224,6 +224,7 @@ function modify_upload_mimes ( $mimes_types ) {
     $mimes_types['step'] = 'application/STEP';
     $mimes_types['stl'] = 'application/sla';
 	$mimes_types['apk'] = 'application/vnd.android.package-archive';
+	$mimes_types['webp'] = 'image/webp';
     return $mimes_types;
 }
 
@@ -232,7 +233,7 @@ function add_allow_upload_extension_exception( $types, $file, $filename, $mimes 
     $wp_filetype = wp_check_filetype( $filename, $mimes );
     $ext         = $wp_filetype['ext'];
     $type        = $wp_filetype['type'];
-    if( in_array( $ext, array( 'zip', 'rar', 'gz', 'step', 'stl', 'apk' ) ) ) {
+    if( in_array( $ext, array( 'zip', 'rar', 'gz', 'step', 'stl', 'apk', 'webp' ) ) ) {
         $types['ext'] = $ext;
         $types['type'] = $type;
     }
